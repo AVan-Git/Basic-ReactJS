@@ -8,4 +8,8 @@ Học FE cơ bản
     tạo project: npx create-react-app demo-reactjs 
     run project: npm start 
     cai lại thư viện node_modules: npm i
+#####
+    tao nhanh jsx: 
+    rfc: react function component
+
     
