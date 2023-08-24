@@ -11,5 +11,6 @@ Học FE cơ bản
 #####
     tao nhanh jsx: 
     rfc: react function component
+    rcc: react class component
 
     
