@@ -4,6 +4,7 @@ import HandleEvent from './HandleEvent/HandleEvent';
 import StyleWithJSX from './StyleWithJSX/StyleWithJSX';
 import StateDemo from './StateDemo/StateDemo';
 import BaiTapChonXe from './BaiTap/BaiTapChonXe';
+import BaiTapTangGiamFromSize from './BaiTap/BaiTapTangGiamFromSize';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <HandleEvent /> */}
       {/* <StyleWithJSX /> */}
       {/* <StateDemo /> */}
-      <BaiTapChonXe />
+      {/* <BaiTapChonXe /> */}
+      <BaiTapTangGiamFromSize />
     </div>
   );
 }
