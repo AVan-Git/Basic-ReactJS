@@ -10,8 +10,8 @@ Học FE cơ bản
     cai lại thư viện node_modules: npm i
     lib bootstrap:  npm i sass-loader 
                     npm i node-sass
-    npm rebuild --force
-    npm audit fix --force
+        npm rebuild --force
+        npm audit fix --force
 
 #####
     tao nhanh jsx: 
