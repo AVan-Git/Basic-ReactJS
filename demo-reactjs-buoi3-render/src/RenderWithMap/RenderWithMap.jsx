@@ -51,6 +51,21 @@ export default class RenderWithMap extends Component {
         return arrProductJsx
     }
 
+    // cach 2
+    RanderWithProduct2 = () => {
+        let arrProduct = data.map((item, index) => {
+            return <tr>
+                <td scope="row">{item.id}</td>
+                <td>{item.name}</td>
+                <td>{item.price}</td>
+                <td><img src={item.imgCar} alt='...' width={100}></img></td>
+            </tr>
+        })
+
+        return arrProduct;
+
+    }
+
     render() {
         return (
             <div className='container'>
@@ -76,7 +91,7 @@ export default class RenderWithMap extends Component {
                             </tr> */}
 
                             {/*  */}
-                            {this.RanderWithProduct()}
+                            {this.RanderWithProduct2()}
 
                         </tbody>
                     </table>
