@@ -37,7 +37,7 @@ export default class RenderWithMap extends Component {
         data.forEach(item => {
             // console.log("🚀 ~ file: RenderWithMap.jsx:38 ~ RenderWithMap ~ item:", item)
 
-            let tr = <tr>
+            let tr = <tr key={item.id}>
                 <td scope="row">{item.id}</td>
                 <td>{item.name}</td>
                 <td>{item.price}</td>
@@ -54,7 +54,7 @@ export default class RenderWithMap extends Component {
     // cach 2
     RanderWithProduct2 = () => {
         let arrProduct = data.map((item, index) => {
-            return <tr>
+            return <tr key={index}>
                 <td scope="row">{item.id}</td>
                 <td>{item.name}</td>
                 <td>{item.price}</td>

@@ -1,0 +1,145 @@
+
+    {
+        maPhim: 1291,
+        tenPhim: "TRANSFORMERS: QUÁI THÚ TRỖI DẬY",
+        biDanh: "QUAI-THU-TROI-DAY",
+        trailer: "https://youtu.be/TcMBFSGVi1c",
+        hinhAnh: "https://i.mpcdn.top/c/w116vxX/transformers-quai-thu-troi-day.jpg",
+        moTa: "Quái Thú Trỗi Dậy dựa trên sự kiện Beast Wars trong loạt phim hoạt hình \"Transformers\", nơi mà các robot có khả năng biến thành động vật khổng lồ cùng chiến đấu chống lại một mối đe dọa tiềm tàng",
+        maNhom: "GP08",
+        ngaykhoiChieu: "2019-07-29T00:00:00",
+        danhGia: 5
+    },
+    {
+        maPhim: 1292,
+        tenPhim: "NỮ HIỆP SĨ AHSOKA",
+        biDanh: "AHSOKA",
+        trailer: "https://youtu.be/TcMBFSGVi1c",
+        hinhAnh: "https://i.mpcdn.top/c/aaNoyN5/nu-hiep-si-ahsoka.jpg",
+        moTa: "Nữ Hiệp Sĩ Ahsoka kể về sau sự sụp đổ của Đế chế Thiên hà, cựu Hiệp sĩ Jedi Ahsoka Tano điều tra mối đe dọa mới nổi đối với một thiên hà dễ bị tổn thương.",
+        maNhom: "GP08",
+        ngaykhoiChieu: "2019-07-29T00:00:00",
+        danhGia: 5
+    },
+    {
+        maPhim: 1293,
+        tenPhim: "ĐỘI THANH TRỪNG",
+        biDanh: "DOI-THANH-TRUNG",
+        trailer: "https://youtu.be/TcMBFSGVi1c",
+        hinhAnh: "https://i.mpcdn.top/c/0PzgWDM/doi-thanh-trung.jpg",
+        moTa: "Đội Thanh Trừng kể về một tân binh trẻ tuổi được tuyển vào một cơ quan sát thủ bí ẩn nhận ra mình trở nên bất hảo trong nhiệm vụ đầu tiên, truy lùng một nhóm buôn người nguy hiểm.",
+        maNhom: "GP08",
+        ngaykhoiChieu: "2019-07-29T00:00:00",
+        danhGia: 5
+    },
+    {
+        maPhim: 1294,
+        tenPhim: "Điệp Vụ Đoạt Hồn",
+        biDanh: "DIEP-VU",
+        trailer: "https://youtu.be/TcMBFSGVi1c",
+        hinhAnh: "https://i.mpcdn.top/c/zQJgJ9o/diep-vu-doat-hon.jpg",
+        moTa: "Điệp Vụ Đoạt Hồn kể về tay lính đánh thuê được thuê để giành lấy thứ vũ khí biến con người thành sát nhân man rợ, tìm cách trả thù khi em trai anh trở thành nạn nhân của thiết bị này.",
+        maNhom: "GP08",
+        ngaykhoiChieu: "2019-07-29T00:00:00",
+        danhGia: 5
+    },
+    {
+        maPhim: 1295,
+        tenPhim: "Tây Hành Kỷ (Phần 5)",
+        biDanh: "TAY-HANH-KY",
+        trailer: "https://youtu.be/TcMBFSGVi1c",
+        hinhAnh: "https://i.mpcdn.top/c/7DgqW5v/tay-hanh-ky-phan-5.jpg",
+        moTa: "Tây Hành Kỷ (Phần 5) kể về câu chuyện Đại pháp sư Đường Tam Tạng cùng các đồ đệ đi đến bên kia để trả ngọn lửa sáng thế, bảo vệ thế giới.",
+        maNhom: "GP08",
+        ngaykhoiChieu: "2019-07-29T00:00:00",
+        danhGia: 5
+    },
+    {
+        maPhim: 1296,
+        tenPhim: "Tây Hành Kỷ (Phần 5)",
+        biDanh: "TAY-HANH-KY",
+        trailer: "https://youtu.be/TcMBFSGVi1c",
+        hinhAnh: "https://i.mpcdn.top/c/7DgqW5v/tay-hanh-ky-phan-5.jpg",
+        moTa: "Tây Hành Kỷ (Phần 5) kể về câu chuyện Đại pháp sư Đường Tam Tạng cùng các đồ đệ đi đến bên kia để trả ngọn lửa sáng thế, bảo vệ thế giới.",
+        maNhom: "GP08",
+        ngaykhoiChieu: "2019-07-29T00:00:00",
+        danhGia: 5
+    },
+    {
+        maPhim: 1297,
+        tenPhim: "Tây Hành Kỷ (Phần 5)",
+        biDanh: "TAY-HANH-KY",
+        trailer: "https://youtu.be/TcMBFSGVi1c",
+        hinhAnh: "https://i.mpcdn.top/c/7DgqW5v/tay-hanh-ky-phan-5.jpg",
+        moTa: "Tây Hành Kỷ (Phần 5) kể về câu chuyện Đại pháp sư Đường Tam Tạng cùng các đồ đệ đi đến bên kia để trả ngọn lửa sáng thế, bảo vệ thế giới.",
+        maNhom: "GP08",
+        ngaykhoiChieu: "2019-07-29T00:00:00",
+        danhGia: 5
+    },
+    {
+        maPhim: 1298,
+        tenPhim: "Tây Hành Kỷ (Phần 5)",
+        biDanh: "TAY-HANH-KY",
+        trailer: "https://youtu.be/TcMBFSGVi1c",
+        hinhAnh: "https://i.mpcdn.top/c/7DgqW5v/tay-hanh-ky-phan-5.jpg",
+        moTa: "Tây Hành Kỷ (Phần 5) kể về câu chuyện Đại pháp sư Đường Tam Tạng cùng các đồ đệ đi đến bên kia để trả ngọn lửa sáng thế, bảo vệ thế giới.",
+        maNhom: "GP08",
+        ngaykhoiChieu: "2019-07-29T00:00:00",
+        danhGia: 5
+    },
+    {
+        maPhim: 1299,
+        tenPhim: "Tây Hành Kỷ (Phần 5)",
+        biDanh: "TAY-HANH-KY",
+        trailer: "https://youtu.be/TcMBFSGVi1c",
+        hinhAnh: "https://i.mpcdn.top/c/7DgqW5v/tay-hanh-ky-phan-5.jpg",
+        moTa: "Tây Hành Kỷ (Phần 5) kể về câu chuyện Đại pháp sư Đường Tam Tạng cùng các đồ đệ đi đến bên kia để trả ngọn lửa sáng thế, bảo vệ thế giới.",
+        maNhom: "GP08",
+        ngaykhoiChieu: "2019-07-29T00:00:00",
+        danhGia: 5
+    },
+    {
+        maPhim: 1259,
+        tenPhim: "Tây Hành Kỷ (Phần 5)",
+        biDanh: "TAY-HANH-KY",
+        trailer: "https://youtu.be/TcMBFSGVi1c",
+        hinhAnh: "https://i.mpcdn.top/c/7DgqW5v/tay-hanh-ky-phan-5.jpg",
+        moTa: "Tây Hành Kỷ (Phần 5) kể về câu chuyện Đại pháp sư Đường Tam Tạng cùng các đồ đệ đi đến bên kia để trả ngọn lửa sáng thế, bảo vệ thế giới.",
+        maNhom: "GP08",
+        ngaykhoiChieu: "2019-07-29T00:00:00",
+        danhGia: 5
+    },
+    {
+        maPhim: 1210,
+        tenPhim: "Tây Hành Kỷ (Phần 5)",
+        biDanh: "TAY-HANH-KY",
+        trailer: "https://youtu.be/TcMBFSGVi1c",
+        hinhAnh: "https://i.mpcdn.top/c/7DgqW5v/tay-hanh-ky-phan-5.jpg",
+        moTa: "Tây Hành Kỷ (Phần 5) kể về câu chuyện Đại pháp sư Đường Tam Tạng cùng các đồ đệ đi đến bên kia để trả ngọn lửa sáng thế, bảo vệ thế giới.",
+        maNhom: "GP08",
+        ngaykhoiChieu: "2019-07-29T00:00:00",
+        danhGia: 5
+    },
+    {
+        maPhim: 1201,
+        tenPhim: "Tây Hành Kỷ (Phần 5)",
+        biDanh: "TAY-HANH-KY",
+        trailer: "https://youtu.be/TcMBFSGVi1c",
+        hinhAnh: "https://i.mpcdn.top/c/7DgqW5v/tay-hanh-ky-phan-5.jpg",
+        moTa: "Tây Hành Kỷ (Phần 5) kể về câu chuyện Đại pháp sư Đường Tam Tạng cùng các đồ đệ đi đến bên kia để trả ngọn lửa sáng thế, bảo vệ thế giới.",
+        maNhom: "GP08",
+        ngaykhoiChieu: "2019-07-29T00:00:00",
+        danhGia: 5
+    },
+    {
+        maPhim: 1202,
+        tenPhim: "Tây Hành Kỷ (Phần 5)",
+        biDanh: "TAY-HANH-KY",
+        trailer: "https://youtu.be/TcMBFSGVi1c",
+        hinhAnh: "https://i.mpcdn.top/c/7DgqW5v/tay-hanh-ky-phan-5.jpg",
+        moTa: "Tây Hành Kỷ (Phần 5) kể về câu chuyện Đại pháp sư Đường Tam Tạng cùng các đồ đệ đi đến bên kia để trả ngọn lửa sáng thế, bảo vệ thế giới.",
+        maNhom: "GP08",
+        ngaykhoiChieu: "2019-07-29T00:00:00",
+        danhGia: 5
+    }
+
