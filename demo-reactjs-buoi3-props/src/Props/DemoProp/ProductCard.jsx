@@ -8,7 +8,8 @@ export default class ProductCard extends Component {
         //this.props: thuộc tính có sẵn trong react class component
         //dùng để nhận giá trị từ component cha truyền vào
 
-        const{name, age} = this.props;
+        const{item} = this.props;
+        console.log("🚀 ~ file: ProductCard.jsx:12 ~ ProductCard ~ render ~ item:", item)
 /*
         so sánh: state & props
 
@@ -19,15 +20,21 @@ export default class ProductCard extends Component {
         phương thức setState, props không thể gán lại giá trị 
         (readonly) dùng để nhận giá trị từ 
         component cha truyền vào.
+
+
+        optional chaining: ? => nếu có thì làm không thì bỏ qua
 */
 
         return (
             <>
                 <div className="card text-white bg-primary">
-                    <img className="card-img-top" src={`https://i.pravatar.cc/?u=${age}`} width={100} alt="Title" />
+                    {/* optional chaining item?.age */}
+                    <img className="card-img-top" src={`https://i.pravatar.cc/?u=${item?.age}`} width={100} alt="Title" />
                     <div className="card-body">
-                        <h4 className="card-title">{name}</h4>
-                        <p className="card-text">{age}</p>
+                        {/* optional chaining */}
+                        <h4 className="card-title">{item?.name}</h4> 
+                        {/* optional chaining */}
+                        <p className="card-text">{item?.age}</p>
                     </div>
                 </div>
 

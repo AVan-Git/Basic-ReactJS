@@ -2,3 +2,4 @@
 
 ## anh demoProp
 ![...](./images/img_demoProp.png)
+![...](./images/img_demoPropArrPerson.png)
