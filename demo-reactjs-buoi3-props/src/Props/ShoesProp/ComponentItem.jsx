@@ -6,7 +6,6 @@ export default class ComponentItem extends Component {
 
    render() {
       let { item } = this.props;
-      console.log("🚀 ~ file: ComponentItem.jsx:9 ~ ComponentItem ~ render ~ item:", item)
       return (
          <>
             <div className="card text-white bg-primary mt-3">

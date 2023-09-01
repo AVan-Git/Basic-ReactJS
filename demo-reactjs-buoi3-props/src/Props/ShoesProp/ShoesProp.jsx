@@ -4,7 +4,6 @@ import DataBase from '../../DataBase/DataBase'
 import ComponentItem from './ComponentItem';
 
 const data = DataBase;
-console.log("🚀 ~ file: ShoesProp.jsx:6 ~ data:", data)
 
 export default class ShoesProp extends Component {
 
