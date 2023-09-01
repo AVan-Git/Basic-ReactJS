@@ -18,4 +18,7 @@ Học FE cơ bản
     rfc: react function component
     rcc: react class component
 
+
+#### Link fake img 
+    avatar : https://i.pravatar.cc/?u=${age}
     
