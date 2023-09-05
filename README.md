@@ -12,6 +12,7 @@ Học FE cơ bản
                     npm i node-sass
         npm rebuild --force
         npm audit fix --force
+    npm i react-router-dom
 
 #####
     tao nhanh jsx: 
@@ -38,6 +39,8 @@ Học FE cơ bản
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
+
+    the lien kết các trang lại vs nhau lap-link  react router dom
 
 
     
