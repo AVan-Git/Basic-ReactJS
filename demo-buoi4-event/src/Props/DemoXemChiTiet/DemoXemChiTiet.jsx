@@ -20,15 +20,21 @@ export default class DemoXemChiTiet extends Component {
       return data.map((itemProduct, index) => {
          return (
             <div className="col-4 mt-3" key={index}>
-               <ProductItem item={itemProduct} />
+               <ProductItem item={itemProduct} xemChiTiet={this.xemChiTiet} key={index} />
             </div>
          )
+      })
+   }
+
+   xemChiTiet = (productClick) => {
+      this.setState({ item: productClick }, () => {
+         console.log("🚀 ~ file: DemoXemChiTiet.jsx:38 ~ DemoXemChiTiet ~ productClick:", productClick)
       })
    }
    render() {
 
       // cachs ru gon ten goi vs state
-      let {maSP, tenSP, hinhAnh, heDieuHanh, cameraTruoc, cameraSau, rom, ram} = this.state.item;
+      let { maSP, tenSP, hinhAnh, heDieuHanh, cameraTruoc, cameraSau, rom, ram } = this.state.item;
 
       return (
          <div className='container mt-3'>
@@ -87,3 +93,4 @@ export default class DemoXemChiTiet extends Component {
       )
    }
 }
+

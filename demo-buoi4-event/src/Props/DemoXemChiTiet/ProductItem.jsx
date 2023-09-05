@@ -3,9 +3,8 @@ import React, { Component } from 'react'
 export default class ProductItem extends Component {
   render() {
 
-    let {item} = this.props
+    let {item, xemChiTiet} = this.props
     
-    console.log("🚀 ~ file: ProductItem.jsx:7 ~ ProductItem ~ render ~ this.props:", this.props)
     return (
       <>
         <h2 className="text-center text-danger">ProductItem</h2>
@@ -23,10 +22,7 @@ export default class ProductItem extends Component {
                         autocomplete="off"
                         onClick={
                            () => {
-                              
-                            //   this.setState({ item: item}, () => {
-                            //      console.log("🚀 ~ file: DemoXemChiTiet.jsx:38 ~ DemoXemChiTiet ~ index:", index)
-                            //   })
+                            xemChiTiet(item)
                            }
                         }
                      >Xem Chi Tiết</button>
