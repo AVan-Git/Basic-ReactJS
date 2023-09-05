@@ -32,7 +32,14 @@ export default class DemoXemChiTiet extends Component {
                         autocomplete="off"
                         onClick={
                            () => {
-                              this.setState({ item: data[index] }, () => {
+                              // data su dung index(sẽ có trường hợp k phù hợp), cách 2 gui luon item của thằng map- này để gửi đi
+
+                              // this.setState({ item: data[index] }, () => {
+                              //    console.log("🚀 ~ file: DemoXemChiTiet.jsx:38 ~ DemoXemChiTiet ~ index:", index)
+                              // })
+
+                              //cách 2
+                              this.setState({ item: item}, () => {
                                  console.log("🚀 ~ file: DemoXemChiTiet.jsx:38 ~ DemoXemChiTiet ~ index:", index)
                               })
                            }
@@ -46,7 +53,8 @@ export default class DemoXemChiTiet extends Component {
    }
    render() {
 
-
+      // cachs ru gon ten goi vs state
+      let {maSP, tenSP, hinhAnh, heDieuHanh, cameraTruoc, cameraSau, rom, ram} = this.state.item;
 
       return (
          <div className='container mt-3'>
@@ -65,7 +73,7 @@ export default class DemoXemChiTiet extends Component {
                <div className="row">
                   <div className="col-3">
                      <h3 className="text-center">Iphone</h3>
-                     <img className="card-img-top" src={this.state.item.hinhAnh} alt="Title" />
+                     <img className="card-img-top" src={hinhAnh} alt="Title" />
                   </div>
                   <div className="col-9">
                      <h3 className="text-center">Thông tin chi tiết</h3>
@@ -77,7 +85,7 @@ export default class DemoXemChiTiet extends Component {
                            </tr>
                            <tr>
                               <td>Hệ điều hành</td>
-                              <td>{this.state.item.heDieuHanh} </td>
+                              <td>{heDieuHanh} </td>
                            </tr>
                            <tr>
                               <td>Camera trước</td>
@@ -85,7 +93,7 @@ export default class DemoXemChiTiet extends Component {
                            </tr>
                            <tr>
                               <td>Camera Sau</td>
-                              <td>{this.state.item.cameraSau} </td>
+                              <td>{cameraSau} </td>
                            </tr>
                            <tr>
                               <td>Ram</td>
@@ -93,7 +101,7 @@ export default class DemoXemChiTiet extends Component {
                            </tr>
                            <tr>
                               <td>Rom</td>
-                              <td>{this.state.item.rom} </td>
+                              <td>{rom} </td>
                            </tr>
                         </tbody>
                      </table>
