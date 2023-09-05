@@ -9,32 +9,44 @@ export default class DemoXemChiTiet extends Component {
    // su dung state su ly data
 
    state = {
-      item : data[0]
-      
+      item: data[0]
+
    }
 
-   
+
 
    renderProduct = () => {
-         return data.map((item, index) => {
-            return (
-               <div className="col-4 mt-3" key={index}>
-                  <div className="card" style={{ backgroundColor: "rgba(84, 231, 247)", borderColor: 'darkblue' }}>
-                     <img className="card-img-top" src={item.hinhAnh} alt="Title" />
-                     <div className="card-body">
-                        <h4 className="card-title">{item.tenSP}</h4>
-                        <p className="card-text">{item.giaBan} VND</p>
+      return data.map((item, index) => {
+         return (
+            <div className="col-4 mt-3" key={index}>
+               <div className="card" style={{ backgroundColor: "rgba(84, 231, 247)", borderColor: 'darkblue' }}>
+                  <img className="card-img-top" src={item.hinhAnh} alt="Title" />
+                  <div className="card-body">
+                     <h4 className="card-title">{item.tenSP}</h4>
+                     <p className="card-text">{item.giaBan} VND</p>
 
-                        <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">Xem Chi Tiết</button>
-                     </div>
+                     <button type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="button"
+                        aria-pressed="false"
+                        autocomplete="off"
+                        onClick={
+                           () => {
+                              this.setState({ item: data[index] }, () => {
+                                 console.log("🚀 ~ file: DemoXemChiTiet.jsx:38 ~ DemoXemChiTiet ~ index:", index)
+                              })
+                           }
+                        }
+                     >Xem Chi Tiết</button>
                   </div>
                </div>
-            )
-         })
-      }
+            </div>
+         )
+      })
+   }
    render() {
 
-      
+
 
       return (
          <div className='container mt-3'>

@@ -6,3 +6,4 @@
 
 #### San pham
 ![...](./image/img_anhDetail.png)
+![...](./image/img_anhDetail2.png)
