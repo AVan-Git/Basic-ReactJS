@@ -6,11 +6,17 @@ const data = DataPhone;
 
 export default class DemoXemChiTiet extends Component {
 
+   // su dung state su ly data
+
+   state = {
+      item : data[0]
+      
+   }
+
    
 
    renderProduct = () => {
          return data.map((item, index) => {
-            console.log("🚀 ~ file: DemoXemChiTiet.jsx:12 ~ DemoXemChiTiet ~ returndata.map ~ item:", item)
             return (
                <div className="col-4 mt-3" key={index}>
                   <div className="card" style={{ backgroundColor: "rgba(84, 231, 247)", borderColor: 'darkblue' }}>
@@ -47,7 +53,7 @@ export default class DemoXemChiTiet extends Component {
                <div className="row">
                   <div className="col-3">
                      <h3 className="text-center">Iphone</h3>
-                     <img className="card-img-top" src="./img/samsung.webp" alt="Title" />
+                     <img className="card-img-top" src={this.state.item.hinhAnh} alt="Title" />
                   </div>
                   <div className="col-9">
                      <h3 className="text-center">Thông tin chi tiết</h3>
@@ -55,27 +61,27 @@ export default class DemoXemChiTiet extends Component {
                         <tbody>
                            <tr>
                               <td>Màn Hình</td>
-                              <td>Màn Hình</td>
+                              <td>{this.state.item.manHinh}</td>
                            </tr>
                            <tr>
                               <td>Hệ điều hành</td>
-                              <td>Hệ điều hành</td>
+                              <td>{this.state.item.heDieuHanh} </td>
                            </tr>
                            <tr>
                               <td>Camera trước</td>
-                              <td>Camera trước</td>
+                              <td>{this.state.item.cameraTruoc} </td>
                            </tr>
                            <tr>
                               <td>Camera Sau</td>
-                              <td>Camera Sau</td>
+                              <td>{this.state.item.cameraSau} </td>
                            </tr>
                            <tr>
                               <td>Ram</td>
-                              <td>Ram</td>
+                              <td>{this.state.item.ram} </td>
                            </tr>
                            <tr>
                               <td>Rom</td>
-                              <td>Rom</td>
+                              <td>{this.state.item.rom} </td>
                            </tr>
                         </tbody>
                      </table>
