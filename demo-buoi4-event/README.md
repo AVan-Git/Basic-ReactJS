@@ -7,3 +7,7 @@
 #### San pham
 ![...](./image/img_anhDetail.png)
 ![...](./image/img_anhDetail2.png)
+
+#### san pham duoc dua qua jsx khac vs props
+
+![...](./image/img_anhProduct_prop.png)
