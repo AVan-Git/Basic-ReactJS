@@ -13,3 +13,7 @@
 
 #### sap duoc gui lai qia ConnectFunction
 ![...](./image/img_anhProduct_sendDataQuaConectFunction.png)
+
+#### BT Product Car -- chuyen data qua các trang component ô -> cháu và ngược lại  anh -> e họ
+
+![...](./image/img_anhProductCar.png)
