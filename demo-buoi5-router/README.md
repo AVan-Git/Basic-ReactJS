@@ -6,9 +6,10 @@
 ![...](./images/img_router.png)
 
 #### ảnh react Form 
-
 ![...](./images/img_ReactForm.png)
 
+#### ảnh react Form su dung onInput
+![...](./images/img_ReactForm2.png)
 
 #### ảnh 404
 ![...](./images/img_page404.png)
