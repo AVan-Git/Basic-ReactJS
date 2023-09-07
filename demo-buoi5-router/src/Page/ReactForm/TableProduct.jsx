@@ -27,7 +27,7 @@ export default class TableProduct extends Component {
 
   render() {
 
-    let {arrProduct} = this.props;
+    let {arrProduct, delProduct} = this.props;
 
     return (
       <>
@@ -70,7 +70,11 @@ export default class TableProduct extends Component {
                     <td>{item.productType}</td>
                     <td>{item.description}</td>
                     <td>
-                      <button type="button" class="btn btn-danger mx-2">Del</button>
+                      <button type="button" class="btn btn-danger mx-2" 
+                        onClick={() => {
+                          delProduct(item.id)
+                        }}
+                       >Del</button>
                       <button type="button" class="btn btn-primary">Edit</button>
                     </td>
                   </tr>

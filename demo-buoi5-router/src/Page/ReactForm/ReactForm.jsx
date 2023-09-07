@@ -7,23 +7,35 @@ export default class ReactForm extends Component {
 
   state = {
     arrProduct: [
-      { id: '01', name: 'Product 1', price: '1000', productType: 'mobile', description: 'des 1', img: 'https://picsum.photos/50/50' },
-      { id: '02', name: 'Product 2', price: '1500', productType: 'tablet', description: 'des 2', img: 'https://picsum.photos/50/50' },
+      { id: '01', name: 'Product 1', price: '1000', productType: 'mobile', description: 'des 1', img: 'https://picsum.photos/id/2/50/50' },
+      { id: '02', name: 'Product 2', price: '1500', productType: 'tablet', description: 'des 2', img: 'https://picsum.photos/id/1/50/50' },
     ]
   }
 
-  addProduct = async (newProduct) => {
+  //
+  addProduct = (newProduct) => {
     console.log('addProduct()');
     // console.log("🚀 ~ file: ReactForm.jsx:16 ~ ReactForm ~ newProduct:", newProduct)
 
     //  this.state.arrProduct.push(newProduct)  
     let arrUpdate = [...this.state.arrProduct, {...newProduct}]
-    await this.setState(
+    this.setState(
       {
         arrProduct: arrUpdate
+      }, () => {
+        console.log();
       }
     )
+  }
 
+  // delProduct
+  delProduct =  (idDel) =>  {
+    console.log('delProduct()')
+
+    //sử dung filter trong array de xoa
+    let arrNew = this.state.arrProduct.filter(item=> item.id !== idDel)
+
+    this.setState({arrProduct: arrNew}, () => {console.log();})
   }
 
   render() {
@@ -32,7 +44,9 @@ export default class ReactForm extends Component {
         <h2 className="text-center text-danger">Product Management</h2>
         <hr />
         <FromProduct addProduct={this.addProduct} />
-        <TableProduct arrProduct={this.state.arrProduct} />
+        <TableProduct arrProduct={this.state.arrProduct}  
+          delProduct = {this.delProduct}
+        />
 
       </div>
     )
