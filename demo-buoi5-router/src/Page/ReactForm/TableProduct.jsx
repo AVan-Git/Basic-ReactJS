@@ -64,7 +64,7 @@ export default class TableProduct extends Component {
                 arrProduct.map((item, index) => {
                   return <tr class="">
                     <td scope="row">{item.id}</td>
-                    <td><img src={item.img} alt='...' /></td>
+                    <td><img width={50} src={item.img} alt='...' /></td>
                     <td>{item.name}</td>
                     <td>{item.price}</td>
                     <td>{item.productType}</td>

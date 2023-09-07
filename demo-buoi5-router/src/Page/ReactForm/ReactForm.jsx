@@ -18,24 +18,35 @@ export default class ReactForm extends Component {
     // console.log("🚀 ~ file: ReactForm.jsx:16 ~ ReactForm ~ newProduct:", newProduct)
 
     //  this.state.arrProduct.push(newProduct)  
-    let arrUpdate = [...this.state.arrProduct, {...newProduct}]
+    let arrUpdate = [...this.state.arrProduct, { ...newProduct }]
     this.setState(
       {
         arrProduct: arrUpdate
       }, () => {
         console.log();
+        this.luuStore()
       }
     )
   }
 
   // delProduct
-  delProduct =  (idDel) =>  {
+  delProduct = (idDel) => {
     console.log('delProduct()')
 
     //sử dung filter trong array de xoa
-    let arrNew = this.state.arrProduct.filter(item=> item.id !== idDel)
+    let arrNew = this.state.arrProduct.filter(item => item.id !== idDel)
 
-    this.setState({arrProduct: arrNew}, () => {console.log();})
+    this.setState({ arrProduct: arrNew }, () => {
+      console.log();
+      this.luuStore()
+    })
+  }
+
+  //luu store
+  luuStore() {
+    //chuyen thanh chuoi
+    let val = JSON.stringify(this.state.arrProduct)
+    localStorage.setItem('arrProduct', val);
   }
 
   render() {
@@ -44,8 +55,8 @@ export default class ReactForm extends Component {
         <h2 className="text-center text-danger">Product Management</h2>
         <hr />
         <FromProduct addProduct={this.addProduct} />
-        <TableProduct arrProduct={this.state.arrProduct}  
-          delProduct = {this.delProduct}
+        <TableProduct arrProduct={this.state.arrProduct}
+          delProduct={this.delProduct}
         />
 
       </div>
