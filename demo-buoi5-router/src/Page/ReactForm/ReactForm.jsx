@@ -49,6 +49,17 @@ export default class ReactForm extends Component {
     localStorage.setItem('arrProduct', val);
   }
 
+  // Lay store
+  layStote() {
+    //kiem tra local co data khong
+    if (localStorage.getItem('arrProduct')) {
+      // chuyển đổi data từ string về JSON
+      let arrProduct = JSON.parse(localStorage.getItem('arrProduct'))
+      return arrProduct      
+    }
+    return [];
+  }
+
   render() {
     return (
       <div className='container' >
