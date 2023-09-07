@@ -73,4 +73,12 @@ export default class ReactForm extends Component {
       </div>
     )
   }
+
+
+  componentDidMount() {
+    // ham này sẽ được gọi sau hàm render
+
+
+    this.setState({arrProduct: this.layStote()}, () => {console.log();})
+  }
 }
