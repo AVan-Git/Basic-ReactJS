@@ -25,7 +25,7 @@ export default class FromProduct extends Component {
    handleChange = (event) => {
       // event.target // lay data trong input
       let { value, id, name } = event.target;
-let dataType = event.target.getAttribute('data-type')
+      let dataType = event.target.getAttribute('data-type')
 
       // debugger;
       // this.setState({ [id]: value }, () => { console.log() })
@@ -56,7 +56,7 @@ let dataType = event.target.getAttribute('data-type')
             productInfo: newValue,
             error: newErr
          }, () => {
-            console.log(this.state);
+            console.log();
          }
       )
    }
@@ -65,7 +65,11 @@ let dataType = event.target.getAttribute('data-type')
    // fun -chan su kien reload cua browser
    handleSubmit = (event) => {
       event.preventDefault();
-      console.log(this.state);
+      // console.log(this.state);
+
+
+      // khi nguoi dung bam  nut submit => gui du lieu nguoi dung nhap từ state => ra hàm addProduct
+      this.props.addProduct(this.state.productInfo)
 
    }
    render() {
@@ -97,7 +101,7 @@ let dataType = event.target.getAttribute('data-type')
                   <div className="col-6">
                      <div className="form-group">
                         <p>image</p>
-                        <input className='form-control' name="img" id="img" onInput={this.handleChange} />
+                        <input className='form-control' name="img" id="img"  onInput={this.handleChange} />
                         <p className="text-danger">{this.state.error.img}</p>
                      </div>
 
@@ -118,7 +122,7 @@ let dataType = event.target.getAttribute('data-type')
                   </div>
                </div>
                <div className="card-footer text-muted">
-                  <button class="btn btn-success mx-2">Create</button>
+                  <button class="btn btn-success mx-2"  >Create</button>
                   <button type="button" class="btn btn-primary">Update</button>
                </div>
             </form>
