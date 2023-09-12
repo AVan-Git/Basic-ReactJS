@@ -12,7 +12,7 @@ Học FE cơ bản
                     npm i node-sass
         npm rebuild --force
         npm audit fix --force
-    npm i react-router-dom
+    npm i react-router-dom   -- chú ý <Outlet /> - App.js
 
 #####
     tao nhanh jsx: 
