@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Home from './Page/Home/Home';
 import Page404 from './Page/Page404/Page404';
 import About from './Page/About/About';
 import Contact from './Page/Contact/Contact';
-import DemoLifeCycle from './DemoLifeCycle/DemoLifeCycle';
+import ReactLifeCycle from './ReactLifeCycle/ReactLifeCycle'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,8 +19,9 @@ root.render(
         <Route path='' element={<Home />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/about' element={<About />} />
-        <Route path='/demoLifeCycle' element={<DemoLifeCycle />} />
+        <Route path='/reactLifeCycle' element={<ReactLifeCycle />} />
         <Route path='*' element={<Page404 />} />
+        {/* <Route path='*' element={<Navigate to="" />} /> */}
 
       </Route>
     </Routes>
