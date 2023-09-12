@@ -21,11 +21,21 @@ export default class DemoLifeCycle extends Component {
     return currentState;
   }
 
+  shouldComponentUpdate(newProps, newState) {
+    console.log('shouldComponentUpdate()');
+    return true;
+  }
+
   render() {
     console.log('render');
     return (
       <div className='container'>
         <h3>Number: {this.state.number} </h3>
+
+        <button type="button" class="btn btn-success" 
+          onClick={() => {this.setState({number: ++this.state.number}, () => {console.log();})}}
+        >+</button>
+        <br />
         <Child />
       </div>
     )
