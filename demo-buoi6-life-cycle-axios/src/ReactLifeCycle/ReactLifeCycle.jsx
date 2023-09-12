@@ -17,7 +17,7 @@ export default class DemoLifeCycle extends Component {
   static getDerivedStateFromProps(newProps, currentState) {
     console.log('getDrivedStateFromProps');
     // this.state({number: 2}, () => {console.log();})
-    currentState.number = 2
+    currentState.number = 20
     return currentState;
   }
 
@@ -33,5 +33,6 @@ export default class DemoLifeCycle extends Component {
 
   componentDidMount () {
     console.log("componentDidMount");
+    /// chỉ chạy 1 lần khi component load đầu tiên
   }
 }
