@@ -60,6 +60,20 @@ export default class ReactForm extends Component {
     return [];
   }
 
+  // su dung hamf de can thiep lay data truoc khi chạy đến render
+  static getDerivedStateFromProps(newProps, currentState) {
+    console.log('getDrivedStateFromProps');
+    
+    //kiem tra local co data khong
+    if (localStorage.getItem('arrProduct')) {
+      // chuyển đổi data từ string về JSON
+      currentState.arrProduct = JSON.parse(localStorage.getItem('arrProduct'))
+      return currentState      
+    }
+    return null;
+
+  }
+
   render() {
     return (
       <div className='container' >
@@ -78,7 +92,7 @@ export default class ReactForm extends Component {
   componentDidMount() {
     // ham này sẽ được gọi sau hàm render
 
-
-    this.setState({arrProduct: this.layStote()}, () => {console.log();})
+    // co hàm  getDerivedStateFromProps() lay dataStore len không can componentDidMount()
+    // this.setState({arrProduct: this.layStote()}, () => {console.log();})
   }
 }
