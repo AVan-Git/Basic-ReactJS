@@ -15,10 +15,18 @@ export default class Child extends Component {
     return null;
   }
 
-
-
-  shouldComponentUpdate(newProps, newState) {
-    console.log('shouldComponentUpdate() - child');
+  /**
+   * this.props: là props hiên tại
+   * nextProps  ; là props mới trước khi render()
+   * nextState 
+   * @returns 1 chay cả render va componentDidMount() khi component được gọi
+   *          false : thi se reload  render() và componentDidMount()
+   */
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.number !== nextProps) {
+      console.log('shouldComponentUpdate - child'); 
+      return true;
+    }
     return false;
   }
 
@@ -28,6 +36,8 @@ export default class Child extends Component {
       <div className='container'>
         <div className="display-4 p-5 bg-dark text-white">
           Component Child
+
+          <p>Number : {this.props.number}</p>
         </div>
 
       </div>

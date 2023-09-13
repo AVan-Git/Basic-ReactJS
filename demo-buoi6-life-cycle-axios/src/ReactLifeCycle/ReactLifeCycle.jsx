@@ -6,7 +6,8 @@ export default class DemoLifeCycle extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      number: 1
+      number: 1,
+      like: 1
     }
     console.log('constructor');
   }
@@ -17,12 +18,12 @@ export default class DemoLifeCycle extends Component {
   static getDerivedStateFromProps(newProps, currentState) {
     console.log('getDrivedStateFromProps');
     // this.state({number: 2}, () => {console.log();})
-    currentState.number = 20
-    return currentState;
+    // currentState.number = 20
+    return null;
   }
 
-  shouldComponentUpdate(newProps, newState) {
-    console.log('shouldComponentUpdate()');
+  shouldComponentUpdate(nextProps, nextState){
+    console.log('shouldComponentUpdate ');
     return true;
   }
 
@@ -30,13 +31,23 @@ export default class DemoLifeCycle extends Component {
     console.log('render');
     return (
       <div className='container'>
-        <h3>Number: {this.state.number} </h3>
-
-        <button type="button" class="btn btn-success" 
-          onClick={() => {this.setState({number: ++this.state.number}, () => {console.log();})}}
-        >+</button>
+        <div className="row">
+          <h3>Number: {this.state.number} </h3>
+          
+          <button type="button" class="btn btn-success"
+            onClick={() => {this.setState({number: ++this.state.number}, () => {console.log();})}}
+          >+</button>
+        </div>
         <br />
-        <Child />
+        <div className="row">
+          <h3>Like: {this.state.like} </h3>
+          <button type="button" class="btn btn-success"
+            onClick={() => {this.setState({like: ++this.state.like }, ()=> {console.log();})}}
+          >+</button>
+          
+        </div>
+        <hr />
+        <Child number={this.state.number} like={this.state.like} />
       </div>
     )
   }

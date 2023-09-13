@@ -5,7 +5,7 @@
         + Can thiếp thay đổi state sau khi render() --- sử dụng ComponentDidMount() {}
         + ComponentDidMount() chỉ chạy một lần duy nhất khi component losd lần đầu tiên - thường dùng để  call api
         + getDerivedStateFromProps() chạy sau mỗi lần reload()
-        + shouldComponentUpdate(newProps, currentState) {} -- tra về True || false -- chạy sau getDerivedStateFromProps() và trước render()
+        + shouldComponentUpdate(newProps, currentState) {} -- tra về True || false -- chạy sau getDerivedStateFromProps() và trước render() - Nếu nó không thực thi, điều đó có nghĩa là không có props hay state nào được thay đổi.
 
 ## Anh my home
 ![...](./images/img_home.png)
