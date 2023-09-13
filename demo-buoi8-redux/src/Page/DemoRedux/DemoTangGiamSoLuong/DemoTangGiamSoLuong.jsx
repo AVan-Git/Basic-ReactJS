@@ -4,13 +4,16 @@ import React, { Component } from 'react'
 import {connect }  from 'react-redux'
 class DemoTangGiamSoLuong extends Component {
   render() {
-    // console.log(this.props); // trả về {dispatch: ƒ} là đã được kết nối tới redux
+    console.log(this.props); // trả về {dispatch: ƒ} là đã được kết nối tới redux
     return (
       <div className='container'>
             <h3 className="text-center">Demo tăng giảm số lượng.</h3>
             <h3>Number: {this.props.number}</h3>
             <button className='btn btn-success'>+</button>
-      </div>
+
+            <hr />
+            <img src={this.props.img} width={200} alt='...' />
+          </div>
     )
   }
 }
@@ -18,10 +21,19 @@ class DemoTangGiamSoLuong extends Component {
 // lấy state từ redux về và biến thành  this.props của component
 // note: nhớ gán xuống connect
 const mapStateToProps = (state) => {
+    // return về object gì thì đó sẽ là props cua component
     return {
-        number: state.number
+        number: state.number,
+        img: state.stateA
     }
 }
+/**
+ * function co mot lenh return vef 1 object thi viet tắt thành
+ * (param) => { return {prop1: '....'}}
+ * (param) => ({})
+ * {return: sẽ được chuyển thành() }
+ */
+
 
 //tạo ra component chứa logic của redux
 const ComponentRedux = connect(mapStateToProps)(DemoTangGiamSoLuong);

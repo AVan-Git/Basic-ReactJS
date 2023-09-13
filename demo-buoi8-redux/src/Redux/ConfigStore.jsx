@@ -3,13 +3,13 @@ import {createStore, combineReducers} from 'redux'
 const rootReducer = combineReducers({
     // Nơi chứa các state của ứng dụng
 
-    number: (state = 1) => {
+    number: (state = 12) => {
         return state;
     },
     stateA: (state = "https://picsum.photos/200/200") => {
         return state;
     }
-    
+
 
 })
 
