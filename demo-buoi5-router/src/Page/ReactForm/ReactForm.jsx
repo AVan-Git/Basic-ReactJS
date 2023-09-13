@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import FromProduct from "./FromProduct";
 import TableProduct from "./TableProduct";
+import axios from 'axios'
 
 export default class ReactForm extends Component {
   state = {
@@ -36,7 +37,7 @@ export default class ReactForm extends Component {
   //
   updateProduct = (newProduct) => {
     console.log("🚀 ~ updateProduct()")
-    let prod = this.state.arrProduct.filter((p) => p.id == newProduct.id);
+    let prod = this.state.arrProduct.find((p) => p.id == newProduct.id);
     if (prod) {
       prod.name = newProduct.name;
       prod.price = newProduct.price;
@@ -51,6 +52,7 @@ export default class ReactForm extends Component {
       },
       () => {
         console.log();
+        this.luuStore();
       }
     );
   };
@@ -66,7 +68,7 @@ export default class ReactForm extends Component {
   //
   addProduct = (newProduct) => {
     console.log("addProduct()");
-    // console.log("🚀 ~ file: ReactForm.jsx:16 ~ ReactForm ~ newProduct:", newProduct)
+    console.log("🚀 ~ file: ReactForm.jsx:16 ~ ReactForm ~ newProduct:", newProduct)
 
     //  this.state.arrProduct.push(newProduct)
     let arrUpdate = [...this.state.arrProduct, { ...newProduct }];
@@ -148,5 +150,22 @@ export default class ReactForm extends Component {
     // ham này sẽ được gọi sau hàm render
     // co hàm  getDerivedStateFromProps() lay dataStore len không can componentDidMount()
     // this.setState({arrProduct: this.layStote()}, () => {console.log();})
+
+
+    // lay data server -- server bi xoa|| khongo tim thay (13/9/23)
+    let promise = axios({
+      url:'https://svcy.myclass.vn/api/Product/GetAll',
+      method: 'GET'
+    })
+
+    // neu thanh cong
+    promise.then(result => {
+      this.setState({arrProduct: result.data}, () => {console.log();});
+    })
+
+    // neu that bai
+    promise.catch(err => {
+      console.log(err);
+    })
   }
 }

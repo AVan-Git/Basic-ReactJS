@@ -11,7 +11,7 @@ export default class TableProduct extends Component {
 
     return arrProduct.map((item, index) => {
       return (
-        <tr class="">
+        <tr class="" key={index}>
           <td scope="row">{item.id}</td>
           <td>
             <img src={item.img} alt="..." />
@@ -69,7 +69,7 @@ export default class TableProduct extends Component {
 
               {arrProduct.map((item, index) => {
                 return (
-                  <tr class="">
+                  <tr class="" key={index}>
                     <td scope="row">{item.id}</td>
                     <td>
                       <img width={50} src={item.img} alt="..." />

@@ -21,5 +21,5 @@
     -> setState(productedit)- luu data cần update -> gửi sang component Form 
     -> su dung getDerivedStateFromProps() de chuyền data update vao productInfo (giúp chuyển data vao input) 
     -> btnUpdate gửi {...this.state.productInfo} về ReactForm theo updateProduct()
-    -> updateProduct: sd filter đe tim product can update trong arr roi thay doi data
+    -> updateProduct: sd arr.find() đe tim product can update trong arr roi thay doi data
     -> setState()

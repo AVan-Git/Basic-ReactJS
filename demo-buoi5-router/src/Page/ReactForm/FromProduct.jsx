@@ -1,5 +1,6 @@
 //rcc
 import React, { Component } from "react";
+import axios from 'axios'
 
 export default class FromProduct extends Component {
   state = {
@@ -74,9 +75,8 @@ export default class FromProduct extends Component {
    * @param {*} currentState
    */
   static getDerivedStateFromProps(newProps, currentState) {
-   
     if (newProps.productEdit.id !== currentState.productInfo.id) {
-      console.log('getDerivedStateFromProps()');
+      console.log("getDerivedStateFromProps()");
       currentState.productInfo = newProps.productEdit;
 
       return { ...currentState };
@@ -88,7 +88,7 @@ export default class FromProduct extends Component {
     let { id, name, price, img, description, productType } =
       this.state.productInfo;
 
-      let {updateProduct} = this.props;
+    let { updateProduct } = this.props;
     return (
       <>
         <form className="card" onSubmit={this.handleSubmit}>
@@ -175,12 +175,36 @@ export default class FromProduct extends Component {
             </div>
           </div>
           <div className="card-footer text-muted">
-            <button class="btn btn-success mx-2">Create</button>
-            <button 
-               onClick={() => updateProduct({...this.state.productInfo})}
-            type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-success mx-2">Create</button>
+            <button
+              onClick={() => updateProduct({ ...this.state.productInfo })}
+              
+              class="btn btn-primary"
+            >
               Update
             </button>
+            {/* <button
+              class="btn btn-secondary mx-2"
+              onClick={() => {
+                this.setState(
+                  {
+                    productInfo: {
+                      id: "",
+                      name: "",
+                      price: "",
+                      productType: "mobile",
+                      description: "",
+                      img: "",
+                    },
+                  },
+                  () => {
+                    console.log();
+                  }
+                );
+              }}
+            >
+              Clear
+            </button> */}
           </div>
         </form>
       </>

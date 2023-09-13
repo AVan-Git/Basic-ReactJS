@@ -13,6 +13,7 @@ Học FE cơ bản
         npm rebuild --force
         npm audit fix --force
     npm i react-router-dom   -- chú ý <Outlet /> - App.js
+    npm i axios
 
 #####
     tao nhanh jsx: 
