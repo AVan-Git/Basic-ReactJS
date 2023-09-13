@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component, PureComponent } from 'react'
 
-export default class Child extends Component {
+export default class Child extends PureComponent {
 
   constructor(props) {
     super(props);
@@ -22,13 +22,13 @@ export default class Child extends Component {
    * @returns 1 chay cả render va componentDidMount() khi component được gọi
    *          false : thi se reload  render() và componentDidMount()
    */
-  shouldComponentUpdate(nextProps, nextState) {
-    if (this.props.number !== nextProps) {
-      console.log('shouldComponentUpdate - child'); 
-      return true;
-    }
-    return false;
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   if (this.props.number !== nextProps) {
+  //     console.log('shouldComponentUpdate - child'); 
+  //     return true;
+  //   }
+  //   return false;
+  // }
 
   render() {
     console.log('render - child');
