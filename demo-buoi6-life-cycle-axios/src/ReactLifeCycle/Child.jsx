@@ -37,7 +37,7 @@ export default class Child extends PureComponent {
         <div className="display-4 p-5 bg-dark text-white">
           Component Child
 
-          <p>Number : {this.props.number}</p>
+          <p>Number : {this.props.obNumber.number}</p>
         </div>
 
       </div>

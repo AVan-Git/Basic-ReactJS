@@ -11,6 +11,10 @@
         + lưu ý : 
             -so sánh ở đây chỉ là  dang shallow compare - nhận biết được (primitime value): number, String, boolean, undefined,...
             - đồi với reference  value thì khi cập nhật state ở component cha  phải sử dụng {...spreadOperator}
+        + componentDidUpdate(prevProp, prevState) {}
+            - Mỗi lần cập nhật prop hay state no sẽ chạy
+            - Handle sau khi component goi render() 
+            - Tuy nhiên hạn chế setState ở đây, setState ở đây phải có lênh if  -- nếu không nó sẽ render() liện tục như lệnh for
 
 ## Anh my home
 ![...](./images/img_home.png)
