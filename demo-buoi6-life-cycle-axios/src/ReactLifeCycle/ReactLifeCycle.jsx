@@ -61,10 +61,13 @@ export default class DemoLifeCycle extends Component {
         <Child obNumber={this.state.objectNumber} like={this.state.like} />
 
         <hr />
-        <>Count: {this.state.count}</>
+            {/* {this.state.like < 3 ?     <>Count: {this.state.count}</> : "" } */}
+            <>Count: {this.state.count}</>
       </div>
     )
   }
+
+  timeOut = {}
 
   componentDidMount () {
     console.log("componentDidMount");
@@ -73,8 +76,9 @@ export default class DemoLifeCycle extends Component {
     /**setInterval(fun, time)
      * mỗi giây sẽ chạy một lần
      */
-    setInterval(()=> {
+    this.timeOut = setInterval(()=> {
       this.setState({count: this.state.count - 1}, ()=> {console.log();}) 
+      console.log('Count : '+ this.state.count);
     }, 1000)
   }
 
@@ -89,6 +93,11 @@ export default class DemoLifeCycle extends Component {
         console.log(prevState);
 
   }
+  componentWillUnmount(){
+    // trước khi component mất khỏi giao diện => clear tất cả các scrip chạy ngầm
 
-  
+
+    clearInterval(this.timeOut);
+  }
+
 }

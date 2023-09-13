@@ -15,6 +15,9 @@
             - Mỗi lần cập nhật prop hay state no sẽ chạy
             - Handle sau khi component goi render() 
             - Tuy nhiên hạn chế setState ở đây, setState ở đây phải có lênh if  -- nếu không nó sẽ render() liện tục như lệnh for
+        +  componentWillUnmount(){ clearInterval(this.timeOut); }
+            trước khi component mất khỏi giao diện => clear tất cả các scrip chạy ngầm
+            
 
 ## Anh my home
 ![...](./images/img_home.png)
