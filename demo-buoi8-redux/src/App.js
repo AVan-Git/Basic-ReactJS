@@ -36,6 +36,7 @@ function App() {
                   Contact
                 </NavLink>
               </li>
+
               <li className="nav-item">
                 <NavLink className="nav-link" to="/123">
                   Link
@@ -50,15 +51,16 @@ function App() {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  Demo Redux
                 </a>
                 <div className="dropdown-menu" aria-labelledby="dropdownId">
-                  <a className="dropdown-item" href="#">
-                    Action 1
-                  </a>
-                  <a className="dropdown-item" href="#">
+                  <NavLink className="nav-link" to="/reduxNumber">
+                    Demo-Redux-Number
+                  </NavLink>
+
+                  <NavLink className="dropdown-item" to="">
                     Action 2
-                  </a>
+                  </NavLink>
                 </div>
               </li>
             </ul>
@@ -78,7 +80,6 @@ function App() {
           </div>
         </div>
       </nav>
-
 
       <Outlet />
     </>

@@ -6,10 +6,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Page/Home/Home";
 import Page404 from "./Page/Page404/Page404";
 import Contact from "./Page/Contact/Contact";
+import DemoTangGiamSoLuong from "./Page/DemoRedux/DemoTangGiamSoLuong/DemoTangGiamSoLuong";
 import About from "./Page/About/About";
+
+// cài đặt Redux
 import { Provider } from "react-redux";
 import { store } from "./Redux/ConfigStore";
-// cài đặt Redux
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
@@ -20,6 +23,7 @@ root.render(
           <Route path="*" element={<Page404 />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/about" element={<About />}></Route>
+          <Route path="/reduxNumber" element={<DemoTangGiamSoLuong />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
