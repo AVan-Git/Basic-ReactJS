@@ -3,8 +3,12 @@
     lib
         npm i redux
         npm i react-redux
+        npm i react-router-dom   -- chú ý <Outlet /> - App.js
 
-    cài redux
+    nội dung: 
+        cài redux
+        cài router
+    
 
 ## ảnh minh họa
 ![...](./images/img_minhHoa.png)

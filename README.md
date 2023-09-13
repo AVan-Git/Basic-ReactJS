@@ -26,6 +26,7 @@ Học FE cơ bản
 #### Link fake img 
     avatar : https://i.pravatar.cc/?u=${age}
     img random : https://picsum.photos/id/2/200/200
+    API: https://svcy.myclass.vn/swagger/ui/indexs
 
 
 #### boostrap 
