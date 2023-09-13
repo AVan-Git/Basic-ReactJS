@@ -1,33 +1,40 @@
 //rcc
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class TableProduct extends Component {
-
   handleProduct = () => {
-
-    let { arrProduct } = this.props
-    console.log("🚀 ~ file: TableProduct.jsx:9 ~ TableProduct ~ arrProduct:", arrProduct)
+    let { arrProduct } = this.props;
+    console.log(
+      "🚀 ~ file: TableProduct.jsx:9 ~ TableProduct ~ arrProduct:",
+      arrProduct
+    );
 
     return arrProduct.map((item, index) => {
-      return <tr class="">
-        <td scope="row">{item.id}</td>
-        <td><img src={item.img} alt='...' /></td>
-        <td>{item.name}</td>
-        <td>{item.price}</td>
-        <td>{item.productType}</td>
-        <td>{item.description}</td>
-        <td>
-          <button type="button" class="btn btn-danger mx-2">Del</button>
-          <button type="button" class="btn btn-primary">Edit</button>
-        </td>
-      </tr>
-    })
-
-  }
+      return (
+        <tr class="">
+          <td scope="row">{item.id}</td>
+          <td>
+            <img src={item.img} alt="..." />
+          </td>
+          <td>{item.name}</td>
+          <td>{item.price}</td>
+          <td>{item.productType}</td>
+          <td>{item.description}</td>
+          <td>
+            <button type="button" class="btn btn-danger mx-2">
+              Del
+            </button>
+            <button type="button" class="btn btn-primary">
+              Edit
+            </button>
+          </td>
+        </tr>
+      );
+    });
+  };
 
   render() {
-
-    let {arrProduct, delProduct} = this.props;
+    let { arrProduct, delProduct, editProduct } = this.props;
 
     return (
       <>
@@ -60,32 +67,40 @@ export default class TableProduct extends Component {
 
               {/* {this.handleProduct()} */}
 
-              {
-                arrProduct.map((item, index) => {
-                  return <tr class="">
+              {arrProduct.map((item, index) => {
+                return (
+                  <tr class="">
                     <td scope="row">{item.id}</td>
-                    <td><img width={50} src={item.img} alt='...' /></td>
+                    <td>
+                      <img width={50} src={item.img} alt="..." />
+                    </td>
                     <td>{item.name}</td>
                     <td>{item.price}</td>
                     <td>{item.productType}</td>
                     <td>{item.description}</td>
                     <td>
-                      <button type="button" class="btn btn-danger mx-2" 
+                      <button
+                        type="button"
+                        class="btn btn-danger mx-2"
                         onClick={() => {
-                          delProduct(item.id)
+                          delProduct(item.id);
                         }}
-                       >Del</button>
-                      <button type="button" class="btn btn-primary">Edit</button>
+                      >
+                        Del
+                      </button>
+                      <button type="button" class="btn btn-primary"
+                        onClick={() => editProduct(item)}
+                      >
+                        Edit
+                      </button>
                     </td>
                   </tr>
-                })
-              }
-
+                );
+              })}
             </tbody>
           </table>
         </div>
-
       </>
-    )
+    );
   }
 }
