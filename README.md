@@ -14,6 +14,8 @@ Học FE cơ bản
         npm audit fix --force
     npm i react-router-dom   -- chú ý <Outlet /> - App.js
     npm i axios
+    npm i redux
+    npm i react-redux
 
 #####
     tao nhanh jsx: 

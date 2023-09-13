@@ -149,23 +149,23 @@ export default class ReactForm extends Component {
   componentDidMount() {
     // ham này sẽ được gọi sau hàm render
     // co hàm  getDerivedStateFromProps() lay dataStore len không can componentDidMount()
-    // this.setState({arrProduct: this.layStote()}, () => {console.log();})
+    this.setState({arrProduct: this.layStote()}, () => {console.log();})
 
 
     // lay data server -- server bi xoa|| khongo tim thay (13/9/23)
-    let promise = axios({
-      url:'https://svcy.myclass.vn/api/Product/GetAll',
-      method: 'GET'
-    })
+    // let promise = axios({
+    //   url:'https://svcy.myclass.vn/api/Product/GetAll',
+    //   method: 'GET'
+    // })
 
-    // neu thanh cong
-    promise.then(result => {
-      this.setState({arrProduct: result.data}, () => {console.log();});
-    })
+    // // neu thanh cong
+    // promise.then(result => {
+    //   this.setState({arrProduct: result.data}, () => {console.log();});
+    // })
 
-    // neu that bai
-    promise.catch(err => {
-      console.log(err);
-    })
+    // // neu that bai
+    // promise.catch(err => {
+    //   console.log(err);
+    // })
   }
 }
