@@ -20,16 +20,17 @@ const rootReducer = combineReducers({
   },
   stateCar: (state = "./img/products/car_black.webp", action) => {
     // buoc 3: nhận dât và cập nhật
-    switch (action.type) {
-      case "white":
-        state = "./img/products/car_white.webp";
+    let {payload, type}  = action
+    switch (type) {
+      case "CHAGE_COLOR":
+        state = payload;
         break;
-      case "yellow":
-        state = "./img/products/car_yellow.webp";
-        break;
-      case "blue":
-        state = "./img/products/car_blue.webp";
-        break;
+    //   case "yellow":
+    //     state = "./img/products/car_yellow.webp";
+    //     break;
+    //   case "blue":
+    //     state = "./img/products/car_blue.webp";
+    //     break;
 
       default:
         state = "./img/products/car_black.webp";

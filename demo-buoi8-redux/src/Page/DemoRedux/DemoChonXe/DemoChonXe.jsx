@@ -10,7 +10,8 @@ class DemoChonXe extends Component {
   bandleCar = (color) => {
     // buoc 2: viet hàm gửi datalen redux
     const action = {
-      type: color,
+      type: "CHAGE_COLOR",
+      payload: color
     };
     this.props.dispatch(action);
   };
@@ -29,18 +30,18 @@ class DemoChonXe extends Component {
           <div className="col-6">
             <div className="mx-2">
               <button 
-                onClick={() => this.bandleCar("white")}
+                onClick={() => this.bandleCar('./img/products/car_white.webp')}
                 class="btn btn-white mx-2"
                 style={{ border: "1", borderColor: "black" }}
               >
                 White
               </button>
               <button className="btn btn-dark mx-2"
-              onClick={() => this.bandleCar("black")}> Black</button>
+              onClick={() => this.bandleCar("./img/products/car_black.webp")}> Black</button>
               <button className="btn btn-primary mx-2"
-              onClick={() => this.bandleCar("blue")}> Blue</button>
+              onClick={() => this.bandleCar("./img/products/car_blue.webp")}> Blue</button>
               <button className="btn btn-warning mx-2"
-              onClick={() => this.bandleCar("yellow")}> Yellow</button>
+              onClick={() => this.bandleCar("./img/products/car_yellow.webp")}> Yellow</button>
             </div>
           </div>
         </div>
