@@ -12,6 +12,7 @@ import About from "./Page/About/About";
 // cài đặt Redux
 import { Provider } from "react-redux";
 import { store } from "./Redux/ConfigStore";
+import DemoChonXe from "./Page/DemoRedux/DemoChonXe/DemoChonXe";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -24,6 +25,7 @@ root.render(
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/reduxNumber" element={<DemoTangGiamSoLuong />}></Route>
+          <Route path="/reduxChonxe" element={<DemoChonXe />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -45,7 +45,7 @@ function App() {
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  href="/"
                   id="dropdownId"
                   data-bs-toggle="dropdown"
                   aria-haspopup="true"
@@ -56,6 +56,9 @@ function App() {
                 <div className="dropdown-menu" aria-labelledby="dropdownId">
                   <NavLink className="nav-link" to="/reduxNumber">
                     Demo-Redux-Number
+                  </NavLink>
+                  <NavLink className="nav-link" to="/reduxChonxe">
+                    Demo- Chon Xe
                   </NavLink>
 
                   <NavLink className="dropdown-item" to="">
