@@ -8,9 +8,8 @@ class TableComment extends Component {
   };
 
   render() {
+    let { arrComment } = this.props;
 
-    let{arrComment} = this.props;
-    
     return (
       <>
         {/* <img src=" https://i.pravatar.cc/?u=20" alt="..." height={300} /> */}
@@ -26,19 +25,57 @@ class TableComment extends Component {
         </div> */}
 
         {arrComment.map((item, index) => {
-          return <div className="row mt-2  " key={index}>
-          <div className="col-2">
-            <img src= {`https://i.pravatar.cc/?u=${item.name}`} lassName="rounded" alt="..." height={80} />
-          </div>
-          <div className="col-8 bg-secondary rounded">
-            <h3>{item.name}</h3>
-            <p>{item.content}</p>
-          </div>
-        </div>
+          console.log("🚀 ~ file: TableComment.jsx:28 ~ TableComment ~ {arrComment.map ~ index:", index)
+          return (
+            <div className="row mt-2  " key={index}>
+              <div className="col-2">
+                <img
+                  src={`https://i.pravatar.cc/?u=${item.name}`}
+                  lassName="rounded"
+                  alt="..."
+                  height={80}
+                />
+              </div>
+              <div
+                style={{ background: "rgba(0,0,0,0.1)", padding: "10px" }}
+                className="col-8  rounded row"
+              >
+                <div className="col-10">
+                  <h3>{item.name}</h3>
+                  <p>{item.content}</p>
+                </div>
+                <div className="col-2 mt-2">
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => {
+                      const action = {
+                        type: "DELETE_COMMENT",
+                        payload: index,
+                      };
+
+                      this.props.dispatch(action);
+                    }}
+                  >
+                    Del
+                  </button>
+                  <button
+                    className="btn btn-success mt-2"
+                    onClick={() => {
+                      const action = {
+                        type: "EDIT_COMMENT",
+                        payload: index,
+                      };
+
+                      this.props.dispatch(action);
+                    }}
+                  >
+                    Edit
+                  </button>
+                </div>
+              </div>
+            </div>
+          );
         })}
-
-
-
       </>
     );
   }
