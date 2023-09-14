@@ -13,6 +13,7 @@ import About from "./Page/About/About";
 import { Provider } from "react-redux";
 import { store } from "./Redux/ConfigStore";
 import DemoChonXe from "./Page/DemoRedux/DemoChonXe/DemoChonXe";
+import DemoFormComment from "./Page/DemoRedux/DemoFormComment/DemoFormComment";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -26,6 +27,7 @@ root.render(
           <Route path="/about" element={<About />}></Route>
           <Route path="/reduxNumber" element={<DemoTangGiamSoLuong />}></Route>
           <Route path="/reduxChonxe" element={<DemoChonXe />}></Route>
+          <Route path="/formComment" element={<DemoFormComment />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

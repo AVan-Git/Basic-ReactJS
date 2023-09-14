@@ -18,3 +18,6 @@
 
 ## ảnh bài tập chọn xe
 ![...](./images/img_BT_chonxe.png)
+
+## ảnh bài tập Form
+![...](./images/img_BT_Form.png)

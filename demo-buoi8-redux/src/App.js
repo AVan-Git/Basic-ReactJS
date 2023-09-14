@@ -60,6 +60,9 @@ function App() {
                   <NavLink className="nav-link" to="/reduxChonxe">
                     Demo- Chon Xe
                   </NavLink>
+                  <NavLink className="nav-link" to="/formComment">
+                    Form comment
+                  </NavLink>
 
                   <NavLink className="dropdown-item" to="">
                     Action 2

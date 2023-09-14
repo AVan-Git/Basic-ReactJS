@@ -32,7 +32,7 @@ const mapStateToProps = (state) => {
     // return về object gì thì đó sẽ là props cua component
     return {
         number: state.number,
-        img: state.stateA
+        img: state.stateCar
     }
 }
 /**
