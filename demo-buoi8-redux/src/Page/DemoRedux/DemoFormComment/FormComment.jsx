@@ -8,33 +8,65 @@ class FormComment extends Component {
   };
 
   handleSubmit = (e) => {
-    e.preventDefault() ;
+    e.preventDefault();
+  };
+
+  //
+  handleChange = (e) => {
+    let {id,value} = e.target;
+    
+    const action = {
+      type: 'HANDLE_CHANGE',
+      payload: {
+        id: id,
+        value: value
+      }
+    }
+
+    this.props.dispatch(action);
+    
   }
 
   render() {
+    // console.log(this.props);
+    let { name, content } = this.props.commentInfo;
     return (
       <>
         <h2 className="text-center mt-4">Form comment</h2>
         <hr />
-        
-        <form onSubmit={() => this.handleSubmit}>
-            <div className="form-group mt-2">
-                <p>Name</p>
-                <input type="text" name="name" id="name" className="form-control" />
-            </div>
-            <div className="form-group mt-2">
-                <p>Content</p>
-                <input type="text" name="content" id="content" className="form-control" />
-            </div>
-            <div className="form-group mt-2">
-                <button className="btn btn-success">Comment</button>
-            </div>
+
+        <form onSubmit={this.handleSubmit}>
+          <div className="form-group mt-2">
+            <p>Name</p>
+            <input
+              name="name"
+              id="name"
+              value={name}
+              className="form-control"
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-group mt-2">
+            <p>Content</p>
+            <input
+              name="content"
+              id="content"
+              value={content}
+              className="form-control"
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="form-group mt-2">
+            <button className="btn btn-success">Comment</button>
+          </div>
         </form>
       </>
     );
   }
 }
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({
+  commentInfo: state.commentReducers.commentInfo,
+});
 
 export default connect(mapStateToProps)(FormComment);

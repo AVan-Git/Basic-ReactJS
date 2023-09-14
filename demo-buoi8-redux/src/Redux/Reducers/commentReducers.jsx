@@ -2,8 +2,8 @@
 
 const stateDefault = {
     commentInfo:{
-        name: '',
-        content: ''
+        name: 'Tran an Bao',
+        content: '1230..'
     },
     arrComment:[
         {name: 'Nguyen Van A', content: 'like like ...'},
@@ -15,12 +15,21 @@ const stateDefault = {
 export const commentReducers = ( state = stateDefault, action ) => {
 
     switch (action.type) {
-        case "":
-            
+        case "HANDLE_CHANGE":
+            // lay du lieu vua gui den
+            let {id, value} = action.payload;
+            // doi vs state la obj || arr thi phai  clone state ra
+            let commentInfoUpdate = {...state.commentInfo}
+            // thay doi state
+            commentInfoUpdate[id] = value;
+
+            // gan ve state cu
+            state.commentInfo = commentInfoUpdate
             break;
     
         default:
-            return state;
+            break;
     }
+    return {...state};
 
 }

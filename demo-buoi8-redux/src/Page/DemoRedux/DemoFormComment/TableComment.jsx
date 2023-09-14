@@ -10,7 +10,7 @@ class TableComment extends Component {
   render() {
 
     let{arrComment} = this.props;
-    console.log("🚀 ~ file: TableComment.jsx:13 ~ TableComment ~ render ~ arrComment:", arrComment)
+    
     return (
       <>
         {/* <img src=" https://i.pravatar.cc/?u=20" alt="..." height={300} /> */}
