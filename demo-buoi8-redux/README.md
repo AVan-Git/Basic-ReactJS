@@ -15,3 +15,6 @@
 
 ## ảnh minh họa
 ![...](./images/img_minhHoa.png)
+
+## ảnh bài tập chọn xe
+![...](./images/img_BT_chonxe.png)

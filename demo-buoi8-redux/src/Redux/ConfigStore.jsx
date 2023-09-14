@@ -18,7 +18,7 @@ const rootReducer = combineReducers({
         }
         return state;
     },
-    stateA: (state = "https://picsum.photos/200/200", action) => {
+    stateCar: (state = "./img/products/car_black.webp", action) => {
         return state;
     }
 
