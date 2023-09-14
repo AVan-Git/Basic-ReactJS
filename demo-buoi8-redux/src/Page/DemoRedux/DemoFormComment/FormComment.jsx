@@ -9,6 +9,13 @@ class FormComment extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+
+    const action = {
+      type: 'HANDLE_SUBMIT',
+      payload:this.props.commentInfo
+    }
+
+    this.props.dispatch(action)
   };
 
   //

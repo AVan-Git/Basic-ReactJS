@@ -26,7 +26,24 @@ export const commentReducers = ( state = stateDefault, action ) => {
             // gan ve state cu
             state.commentInfo = commentInfoUpdate
             break;
-    
+        case 'HANDLE_SUBMIT':
+            //lay data gui len 
+            let commentInfo = action.payload;
+           
+            //lay  data cu
+            let arrCommentUpdate =  [...state.arrComment];
+            // them comment moi
+            arrCommentUpdate.push(commentInfo);
+
+            //cap nhat vao arr state
+            state.arrComment = arrCommentUpdate
+            
+            // khoi phuc form nhap
+            state.commentInfo = {
+                name:'',
+                content:''
+            }
+            break;
         default:
             break;
     }
