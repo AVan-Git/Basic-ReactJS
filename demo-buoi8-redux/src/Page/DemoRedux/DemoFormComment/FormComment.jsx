@@ -11,28 +11,27 @@ class FormComment extends Component {
     e.preventDefault();
 
     const action = {
-      type: 'HANDLE_SUBMIT',
-      payload:this.props.commentInfo
-    }
+      type: "HANDLE_SUBMIT",
+      payload: this.props.commentInfo,
+    };
 
-    this.props.dispatch(action)
+    this.props.dispatch(action);
   };
 
   //
   handleChange = (e) => {
-    let {id,value} = e.target;
-    
+    let { id, value } = e.target;
+
     const action = {
-      type: 'HANDLE_CHANGE',
+      type: "HANDLE_CHANGE",
       payload: {
         id: id,
-        value: value
-      }
-    }
+        value: value,
+      },
+    };
 
     this.props.dispatch(action);
-    
-  }
+  };
 
   render() {
     // console.log(this.props);
@@ -65,6 +64,20 @@ class FormComment extends Component {
           </div>
           <div className="form-group mt-2">
             <button className="btn btn-success">Comment</button>
+            <button
+              className="btn btn-primary mx-2"
+              onClick={(e) => {
+                e.preventDefault();
+                
+                const action = {
+                  type: "UPDATE_COMMENT",
+                };
+
+                this.props.dispatch(action);
+              }}
+            >
+              Update
+            </button>
           </div>
         </form>
       </>

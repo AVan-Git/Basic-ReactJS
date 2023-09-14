@@ -64,12 +64,35 @@ export const commentReducers = (state = stateDefault, action) => {
       // b1 lay vitri data can update o trong arr
       let index = action.payload;
 
-      // hiện thông tin cu lên form 
-      state.commentInfo = state.arrComment[index]
-      
-    }
-    default:
+      // hiện thông tin cu lên form
+      state.commentInfo = state.arrComment[index];
+
       break;
+    }
+    case "UPDATE_COMMENT": {
+      //1 bien luu clone state.arrComment
+      let arrCommentUpdate = [...state.arrComment];
+
+      // tìm comment có name và nội dung trong mảng (Dựa vào name va content từ state.commentInfo)
+      let cmt =  arrCommentUpdate.find(comment => comment.name === state.commentInfo.name )
+      if (cmt) {
+        cmt.content = state.commentInfo.content
+      }
+
+      //cap nhat
+      state.arrComment =arrCommentUpdate;
+
+      // khoi phuc form nhap
+      state.commentInfo = {
+        name: "",
+        content: "",
+      };
+
+      break;
+    }
+    default: {
+      break;
+    }
   }
   return { ...state };
 };
