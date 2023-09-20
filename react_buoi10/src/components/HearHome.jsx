@@ -26,9 +26,9 @@ export default function HearHome() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link" to="#">
                 Link
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item dropdown">
               <NavLink

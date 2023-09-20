@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import DemoChonXe from "./DemoChonXe";
 
 export default function UseStateDemo() {
   let [number, setNumber] = useState(12);
@@ -41,6 +42,12 @@ export default function UseStateDemo() {
           </div>
         </div>
       </div>
+      
+        
+      <hr />
+          {/* BT Chon xe */}
+          <DemoChonXe />
+          
     </div>
   );
 }
