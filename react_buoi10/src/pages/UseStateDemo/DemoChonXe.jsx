@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
 export default function DemoChonXe() {
-    let [color, setColor] = useState("./img/products/car_black.webp");
+    let [srcImg, setSrcImg] = useState("./img/products/car_black.webp");
     const changeColor = (val) => {
         let str = `./img/products/car_${val}.webp`;
-        setColor(str);
+        setSrcImg(str);
     }
   return (
     <div className="row">
       <div className="col-6">
-        <img src={color} className="border" alt="..." width={500} />
+        <img src={srcImg} className="border" alt="..." width={500} />
       </div>
       <div className="col-6">
         <button onClick={() => {changeColor('blue')}} type="button" className="mx-2 btn btn-primary">
