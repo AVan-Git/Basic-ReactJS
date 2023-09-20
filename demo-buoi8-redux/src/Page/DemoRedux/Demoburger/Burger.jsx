@@ -18,6 +18,8 @@ class Burger extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({
+    burger: state.burgerReducers.burger
+});
 
 export default connect(mapStateToProps)(Burger);
