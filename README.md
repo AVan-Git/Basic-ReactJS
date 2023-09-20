@@ -25,7 +25,7 @@ Học FE cơ bản
     npm i axios                 -- goi APi
     npm i redux                 -- redux
     npm i react-redux           -- redux
-    chen bootstrap 
+    chen bootstrap -- fa5-css -- fontawesome
 
     npm build
 
@@ -35,7 +35,7 @@ Học FE cơ bản
     rcc: react class component
     rcredux: react class component redux
     rxreducer: reducer 
-    
+
 
 
 #### Link fake img 
@@ -61,6 +61,7 @@ Học FE cơ bản
 
     the lien kết các trang lại vs nhau Nav-link  react router dom
 
+    fa5- fontawesom
 
     
     
