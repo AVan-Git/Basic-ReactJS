@@ -4,6 +4,7 @@ import axios from "axios";
 
 export default function UseEffectDemo() {
   let [arrProduct, setArrProduct] = useState([]);
+  let [count,setCount] = useState(99);
 
   const getApi = () => {
     let promise = axios({
@@ -29,8 +30,16 @@ export default function UseEffectDemo() {
     //useEffect sẽ chạy sau khi render()
 
     getApi();
-   
-  }, []);
+   //  setCount(++count); // goi truc tiep no se chayj lien tuc nhu vong lặp (for)
+   setTimeout(()=> {
+      if (count == 2) {
+         setCount(99)
+      }else{
+         setCount(--count);
+      }
+      
+   }, 1000)
+  }, [count]);
 
   const renderProduct = () => {
    return arrProduct.map((item, index) => {
@@ -49,7 +58,9 @@ export default function UseEffectDemo() {
   return (
     <div className="container">
       <h2 className="text-center text-danger">Demo Use Effect </h2>
-     
+      <hr />
+      <h4>ComponentWillunmount (sử dụng useEffect chạy liên tục với biến count )</h4>
+         <p>Sale sập sàn sau: {count} giây</p>
       <hr />
       <h4>ComponentDidMount (Sử dụng cho việc load 1 lần sau khi render)</h4>
       <h3>Shoes Shop</h3>
