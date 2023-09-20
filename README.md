@@ -3,19 +3,26 @@ Học FE cơ bản
 ## nguồn tham khảo
 [Link youtobe Here](https://www.youtube.com/watch?v=qe6xXyMEIEY&list=PLikSVTWMZtjNUFFsvZJpiaNpR1_hrggDf&index=8&ab_channel=L%C3%AATh%C3%A0nhPh%E1%BA%A1m)
 
+## Note 
+### Buoi 10
+    Note: 
+    -
+    -
 ## lệnh cơ bản
 
     tạo project: npx create-react-app demo-reactjs 
     run project: npm start 
     cai lại thư viện node_modules: npm i
+
     lib bootstrap:  npm i sass-loader 
                     npm i node-sass
         npm rebuild --force
         npm audit fix --force
-    npm i react-router-dom   -- chú ý <Outlet /> - App.js
-    npm i axios
-    npm i redux
-    npm i react-redux
+    npm i react-router-dom      -- chú ý <Outlet /> - App.js
+    npm i axios                 -- goi APi
+    npm i redux                 -- redux
+    npm i react-redux           -- redux
+    chen bootstrap 
 
 #####
     tao nhanh jsx: 
