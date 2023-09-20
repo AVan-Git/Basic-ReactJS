@@ -22,6 +22,7 @@ Học FE cơ bản
     rfc: react function component
     rcc: react class component
     rcredux: react class component redux
+    rxreducer: reducer 
 
 
 #### Link fake img 

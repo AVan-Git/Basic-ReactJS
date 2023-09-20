@@ -63,6 +63,9 @@ function App() {
                   <NavLink className="nav-link" to="/formComment">
                     Form comment
                   </NavLink>
+                  <NavLink className="nav-link" to="/demoHamburger">
+                    Demo Hamburger
+                  </NavLink>
 
                   <NavLink className="dropdown-item" to="">
                     Action 2

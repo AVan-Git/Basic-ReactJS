@@ -8,12 +8,14 @@ import Page404 from "./Page/Page404/Page404";
 import Contact from "./Page/Contact/Contact";
 import DemoTangGiamSoLuong from "./Page/DemoRedux/DemoTangGiamSoLuong/DemoTangGiamSoLuong";
 import About from "./Page/About/About";
+import './Assets/scss/style.scss';
 
 // cài đặt Redux
 import { Provider } from "react-redux";
 import { store } from "./Redux/ConfigStore";
 import DemoChonXe from "./Page/DemoRedux/DemoChonXe/DemoChonXe";
 import DemoFormComment from "./Page/DemoRedux/DemoFormComment/DemoFormComment";
+import Demoburger from "./Page/DemoRedux/Demoburger/Demoburger";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -28,6 +30,7 @@ root.render(
           <Route path="/reduxNumber" element={<DemoTangGiamSoLuong />}></Route>
           <Route path="/reduxChonxe" element={<DemoChonXe />}></Route>
           <Route path="/formComment" element={<DemoFormComment />}></Route>
+          <Route path="/demoHamburger" element={<Demoburger />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
