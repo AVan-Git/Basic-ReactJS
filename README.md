@@ -6,8 +6,11 @@ Học FE cơ bản
 ## Note 
 ### Buoi 10
     Note: 
-    -
-    -
+    - học hook (UseState -- UseEffect -- ...)
+    -  cai lib
+    - tao component
+
+![...](./images/img_cautructhumuc.png)
 ## lệnh cơ bản
 
     tạo project: npx create-react-app demo-reactjs 
@@ -24,12 +27,15 @@ Học FE cơ bản
     npm i react-redux           -- redux
     chen bootstrap 
 
+    npm build
+
 #####
     tao nhanh jsx: 
     rfc: react function component
     rcc: react class component
     rcredux: react class component redux
     rxreducer: reducer 
+    
 
 
 #### Link fake img 
@@ -53,7 +59,7 @@ Học FE cơ bản
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
 
-    the lien kết các trang lại vs nhau lap-link  react router dom
+    the lien kết các trang lại vs nhau Nav-link  react router dom
 
 
     
