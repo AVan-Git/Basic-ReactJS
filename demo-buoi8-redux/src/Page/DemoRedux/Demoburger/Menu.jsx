@@ -30,7 +30,7 @@ class Menu extends Component {
             >
               +
             </button>
-            {item.quantity>10?item.quantity:`0${item.quantity}`}
+            {item.quantity > 10 ? item.quantity : `0${item.quantity}`}
             <button
               onClick={() => {
                 const action = {
@@ -53,13 +53,24 @@ class Menu extends Component {
       );
     });
   };
-  renderTotal = () => {
-    let sum = 0;
-    this.props.burger.forEach((item) => {
-      sum += item.price * item.quantity;
-    });
-    return sum;
-  };
+
+  //cach1
+  //   renderTotal = () => {
+  //     let sum = 0;
+  //     this.props.burger.forEach((item) => {
+  //       sum += item.price * item.quantity;
+  //     });
+  //     return sum;
+  //   };
+
+  // cach 2
+    renderTotal = () => {
+        let {burger} = this.props;
+        return burger.reduce((total, item, index) => {
+            return total += item.quantity * item.price
+        }, 0)
+    }
+
   render() {
     let { burger } = this.props;
     return (
@@ -76,32 +87,44 @@ class Menu extends Component {
             </thead>
             <tbody>
               {/* <tr class="">
-                        <td scope="row">salad</td>
-                        <td>
-                            <button type="button" class="mx-2 btn btn-primary">+</button>
-                            1
-                            <button type="button" class="mx-2 btn btn-primary">-</button>
-                        </td>
-                        <td>10</td>
-                    </tr>
-                    <tr class="">
-                        <td scope="row">cheese</td>
-                        <td>
-                            <button type="button" class="mx-2 btn btn-primary">+</button>
-                            1
-                            <button type="button" class="mx-2 btn btn-primary">-</button>
-                        </td>
-                        <td>10</td>
-                    </tr>
-                    <tr class="">
-                        <td scope="row">beef</td>
-                        <td>
-                            <button type="button" class="mx-2 btn btn-primary">+</button>
-                            1
-                            <button type="button" class="mx-2 btn btn-primary">-</button>
-                        </td>
-                        <td>10</td>
-                    </tr> */}
+                <td scope="row">salad</td>
+                <td>
+                  <button type="button" class="mx-2 btn btn-primary">
+                    +
+                  </button>
+                  1
+                  <button type="button" class="mx-2 btn btn-primary">
+                    -
+                  </button>
+                </td>
+                <td>10</td>
+              </tr>
+              <tr class="">
+                <td scope="row">cheese</td>
+                <td>
+                  <button type="button" class="mx-2 btn btn-primary">
+                    +
+                  </button>
+                  1
+                  <button type="button" class="mx-2 btn btn-primary">
+                    -
+                  </button>
+                </td>
+                <td>10</td>
+              </tr>
+              <tr class="">
+                <td scope="row">beef</td>
+                <td>
+                  <button type="button" class="mx-2 btn btn-primary">
+                    +
+                  </button>
+                  1
+                  <button type="button" class="mx-2 btn btn-primary">
+                    -
+                  </button>
+                </td>
+                <td>10</td>
+              </tr> */}
 
               {this.renderMenu()}
               <tr>
