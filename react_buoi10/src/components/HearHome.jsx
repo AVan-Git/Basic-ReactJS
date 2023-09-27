@@ -48,6 +48,12 @@ export default function HearHome() {
                 <NavLink className="dropdown-item" to="/use_effect">
                   Use Effect
                 </NavLink>
+                <NavLink className="dropdown-item" to="/use_text">
+                  App text
+                </NavLink>
+                <NavLink className="dropdown-item" to="/use_callback">
+                  Use call back
+                </NavLink>
                 
                 <NavLink className="dropdown-item" to="/">
                   My home

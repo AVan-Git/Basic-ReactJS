@@ -6,6 +6,7 @@
     - su dung router
     - BT use State
     -- hoc UseEffectDemo
+    - memo(react) giúp găn render khi khong su dung
 
     - link Api Shoes Shop : https://shop.cyberlearn.vn/api/Product
 

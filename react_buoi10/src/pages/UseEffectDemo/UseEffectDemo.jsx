@@ -32,7 +32,7 @@ export default function UseEffectDemo() {
     getApi();
    //  setCount(++count); // goi truc tiep no se chayj lien tuc nhu vong lặp (for)
    setTimeout(()=> {
-      if (count == 2) {
+      if (count === 2) {
          setCount(99)
       }else{
          setCount(--count);

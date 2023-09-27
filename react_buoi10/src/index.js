@@ -8,6 +8,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import UseStateDemo from "./pages/UseStateDemo/UseStateDemo";
 import UseEffectDemo from "./pages/UseEffectDemo/UseEffectDemo";
+import UseCallBackDemo from "./pages/UseCallBackDemo/UseCallBackDemo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +17,7 @@ root.render(
       <Route path="" element={<App />}>
         <Route path="use_state" element={<UseStateDemo />} ></Route>
         <Route path="use_effect" element={<UseEffectDemo />} ></Route>
+        <Route path="use_callback" element={<UseCallBackDemo />} ></Route>
       </Route>
     </Routes>
   </BrowserRouter>
