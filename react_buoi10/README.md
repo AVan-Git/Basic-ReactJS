@@ -37,4 +37,6 @@
     - sử dụng useSelector(state => state.number)
     - useDispatch() de gui action
 
+    -npm i @reduxjs/toolkit
+
 ![...](./images//img_redux.png)

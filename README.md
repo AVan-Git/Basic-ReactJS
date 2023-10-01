@@ -25,6 +25,7 @@ Học FE cơ bản
     npm i axios                 -- goi APi
     npm i redux                 -- redux
     npm i react-redux           -- redux
+    npm i @reduxjs/toolkit
     chen bootstrap -- fa5-css -- fontawesome
 
     npm build
