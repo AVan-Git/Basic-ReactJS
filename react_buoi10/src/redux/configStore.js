@@ -4,8 +4,12 @@ import {combineReducers, createStore} from 'redux'
 const rootReducer = combineReducers({
 
     number: (state=1, action) =>{
-        switch (action.type) {
+        let {type, payload} = action;
+        switch (type) {
             
+            case "CHANGE_NUMBER":
+                state = payload;
+                break;
         
             default:
                 break;

@@ -1,21 +1,39 @@
 // rfc
 import React from "react";
-import { connect } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+// import { connect } from "react-redux";
 
 function DemoNumber(props) {
-  return <div className="container">
-    Number : {props.number}
+  //lay data redux theo fun
+  const number = useSelector((state) => state.number);
 
-    <button onClick={() => {
-        // const action = {
-        //     type:"ADD_NUMBER"
-        // }
-    }} type="button" className="btn btn-success mx-2">+</button>
-  </div>;
+  const dispatch = useDispatch();
+
+  return (
+    <div className="container">
+      <h3>Number : {number}</h3>
+
+      <button
+        onClick={() => {
+          const action = {
+            type: "CHANGE_NUMBER",
+            payload: number + 1,
+          };
+          dispatch(action);
+        }}
+        type="button"
+        className="btn btn-success mx-2"
+      >
+        +
+      </button>
+    </div>
+  );
 }
 //reduxmap -- kieu cu
-const mapStateToProps = (state) => ({
-    number : state.number
-});
+// const mapStateToProps = (state) => ({
+//     number : state.number
+// });
 
-export default connect(mapStateToProps)(DemoNumber);
+// export default connect(mapStateToProps)(DemoNumber);
+
+export default DemoNumber;

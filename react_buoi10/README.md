@@ -11,6 +11,7 @@
     - link Api Shoes Shop : https://shop.cyberlearn.vn/api/Product
 
 ## Anh minh hoa
+![...](./images/img_code.png)
 ![...](./images/img_minhHoaBuoi10.png)
 
 ### Anh UseEffectDemo
@@ -32,5 +33,8 @@
 
 ### redux
 
-#### redux cũ 
+#### redux new 
+    - sử dụng useSelector(state => state.number)
+    - useDispatch() de gui action
+
 ![...](./images//img_redux.png)
