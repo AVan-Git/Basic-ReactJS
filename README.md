@@ -41,7 +41,8 @@ Học FE cơ bản
     - useState:
     - useEffect:
     - useCallback - dùng để tối ưu các render
-    - useMemo: useConnect-tối ưu về biến
+    - useMemo: useConnect-tối ưu về biến || hoặc có thể khai báo ở ngoài
+    -useRef : giống useState nhưng nó sẽ lưu lại sau mỗi lần render - phuf hợp vs conponent Login
 
 #### Link fake img 
     avatar : https://i.pravatar.cc/?u=${age}

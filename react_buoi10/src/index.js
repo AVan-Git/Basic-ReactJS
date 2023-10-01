@@ -10,6 +10,7 @@ import UseStateDemo from "./pages/UseStateDemo/UseStateDemo";
 import UseEffectDemo from "./pages/UseEffectDemo/UseEffectDemo";
 import UseCallBackDemo from "./pages/UseCallBackDemo/UseCallBackDemo";
 import UseMemoDemo from "./pages/UseMemoDemo/UseMemoDemo";
+import UseRefDemo from "./pages/UseRefDemo/UseRefDemo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,6 +21,7 @@ root.render(
         <Route path="use_effect" element={<UseEffectDemo />} ></Route>
         <Route path="use_callback" element={<UseCallBackDemo />} ></Route>
         <Route path="use_memo" element={<UseMemoDemo />} ></Route>
+        <Route path="use_ref" element={<UseRefDemo />} ></Route>
       </Route>
     </Routes>
   </BrowserRouter>

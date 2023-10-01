@@ -1,1 +1,3 @@
 ## Note
+
+Đăng nhập thêm checkbox - Đăng nhập với quyền quản lý 

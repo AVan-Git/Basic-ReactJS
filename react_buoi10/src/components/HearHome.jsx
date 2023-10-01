@@ -57,6 +57,9 @@ export default function HearHome() {
                 <NavLink className="dropdown-item" to="/use_memo">
                   Demo use Memo
                 </NavLink>
+                <NavLink className="dropdown-item" to="/use_ref">
+                  Demo useRef
+                </NavLink>
                 
                 <NavLink className="dropdown-item" to="/">
                   My home

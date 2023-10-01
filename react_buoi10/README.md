@@ -17,6 +17,14 @@
 ![...](./images/img_useEffect.png)
 
 ### Anh UseEffectDemo
-    - useMemo: useConnect-tối ưu về biến trong khi componentA co 1 biến gửi đi sang B (dgl bien_x)thi mỗi lần render thi sẽ lại tạo ra một bien_x và render lại componentB  sử dụng usememo sẽ làm cản chở việc đó. 
+    - useMemo: useConnect-tối ưu về biến trong khi componentA co 1 biến gửi đi sang B (dgl bien_x)thi mỗi lần render thi sẽ lại tạo ra một bien_x và render lại componentB  sử dụng usememo sẽ làm cản chở việc đó. || hoặc có thể khai báo ở ngoài
 
 ![...](./images/img_useMemo.png)
+
+
+### Anh UseRefDemo
+    - UseRef: giống useState nhưng nó sẽ lưu lại sau mỗi lần render - phuf hợp vs conponent Login
+    - UseRef: dùng để lưu giá trị sau mỗi lần render
+    - useRef: thường sử dụng cho các form  không co validation, hoặc load dữ liệu chỉnh sửa
+    - useRef: giảm sự render lại khi mỗi lần phải setState()
+![...](./images/img_useRef.png)
