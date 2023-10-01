@@ -15,3 +15,8 @@
 
 ### Anh UseEffectDemo
 ![...](./images/img_useEffect.png)
+
+### Anh UseEffectDemo
+    - useMemo: useConnect-tối ưu về biến trong khi componentA co 1 biến gửi đi sang B (dgl bien_x)thi mỗi lần render thi sẽ lại tạo ra một bien_x và render lại componentB  sử dụng usememo sẽ làm cản chở việc đó. 
+
+![...](./images/img_useMemo.png)

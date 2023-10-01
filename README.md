@@ -29,14 +29,19 @@ Học FE cơ bản
 
     npm build
 
-#####
+###
     tao nhanh jsx: 
     rfc: react function component
     rcc: react class component
     rcredux: react class component redux
     rxreducer: reducer 
 
+### rfc: react function component
 
+    - useState:
+    - useEffect:
+    - useCallback - dùng để tối ưu các render
+    - useMemo: useConnect-tối ưu về biến
 
 #### Link fake img 
     avatar : https://i.pravatar.cc/?u=${age}
