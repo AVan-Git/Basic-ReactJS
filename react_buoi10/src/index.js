@@ -13,6 +13,7 @@ import UseMemoDemo from "./pages/UseMemoDemo/UseMemoDemo";
 import UseRefDemo from "./pages/UseRefDemo/UseRefDemo";
 import { Provider } from "react-redux";
 import { store } from "./redux/configStore";
+import DemoNumber from "./pages/UseRedux/DemoNumber/DemoNumber";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -25,6 +26,7 @@ root.render(
           <Route path="use_callback" element={<UseCallBackDemo />}></Route>
           <Route path="use_memo" element={<UseMemoDemo />}></Route>
           <Route path="use_ref" element={<UseRefDemo />}></Route>
+          <Route path="redux_number" element={<DemoNumber />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

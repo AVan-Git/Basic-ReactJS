@@ -28,3 +28,9 @@
     - useRef: thường sử dụng cho các form  không co validation, hoặc load dữ liệu chỉnh sửa
     - useRef: giảm sự render lại khi mỗi lần phải setState()
 ![...](./images/img_useRef.png)
+
+
+### redux
+
+#### redux cũ 
+![...](./images//img_redux.png)
