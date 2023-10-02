@@ -12,12 +12,7 @@ export default function Home() {
         url: "https://shop.cyberlearn.vn/api/Product",
         method: "GET",
       });
-      console.log("🚀 ~ file: Home.jsx:14 ~ getApiProduct ~ result:", result);
-      console.log(
-        "🚀 ~ file: Home.jsx:14 ~ getApiProduct ~ result:",
-        result.data.content
-      );
-
+      // console.log("🚀 ~ file: Home.jsx:14 ~ getApiProduct ~ result:", result);
       setArrProduct(result.data.content);
     } catch (err) {
       console.log("🚀 ~ file: Home.jsx:13 ~ getApiProduct ~ err:", err);
@@ -34,11 +29,7 @@ export default function Home() {
       return (
         <div className="col-md-3 mt-2" key={index}>
           <div className="card">
-            <img
-              className="card-img-top"
-              src={item.image}
-              alt="Shoe"
-            />
+            <img className="card-img-top" src={item.image} alt="Shoe" />
             <div className="card-body">
               <h4 className="card-title">{item.name}</h4>
               <p className="card-text">{item.price} $</p>
@@ -55,9 +46,7 @@ export default function Home() {
   return (
     <div className="container">
       <h2 className="text-danger m-2">Shoes app</h2>
-      <div className="row">
-        {renderProduct()}
-      </div>
+      <div className="row">{renderProduct()}</div>
     </div>
   );
 }
