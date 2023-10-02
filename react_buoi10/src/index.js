@@ -15,6 +15,8 @@ import { Provider } from "react-redux";
 import { store } from "./redux/configStore";
 import DemoNumber from "./pages/UseRedux/DemoNumber/DemoNumber";
 import DemoFacebookApp from "./pages/UseRedux/DemoFacebookApp/DemoFacebookApp";
+import ReactForm from "./pages/HookRouters/ReactForm/ReactForm";
+import Profile from "./pages/HookRouters/ReactForm/Profile";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -29,6 +31,8 @@ root.render(
           <Route path="use_ref" element={<UseRefDemo />}></Route>
           <Route path="redux_number" element={<DemoNumber />}></Route>
           <Route path="redux_facebook_app" element={<DemoFacebookApp />}></Route>
+          <Route path="hook-form" element={<ReactForm />}></Route>
+          <Route path="hook-profile" element={<Profile />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

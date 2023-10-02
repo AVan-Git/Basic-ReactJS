@@ -93,6 +93,29 @@ export default function HearHome() {
                 
               </div>
             </li>
+
+            <li className="nav-item dropdown">
+              <NavLink
+                className="nav-link dropdown-toggle"
+                to="#"
+                id="dropdownId"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Router hook
+              </NavLink>
+              <div className="dropdown-menu" aria-labelledby="dropdownId">
+                <NavLink className="dropdown-item" to="/hook-form">
+                  Demo router navigate
+                </NavLink>
+                
+                <NavLink className="dropdown-item" to="/">
+                  My home
+                </NavLink>
+                
+              </div>
+            </li>
           </ul>
           <form className="d-flex my-2 my-lg-0">
             <input

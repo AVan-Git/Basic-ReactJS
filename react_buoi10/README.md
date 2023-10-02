@@ -43,3 +43,9 @@
 
 #### BT comment - redux
 ![...](./images/img_redux_bt_comment.png)
+
+
+### Hook router
+
+#### navigate
+![...](./images/img_router.png)
