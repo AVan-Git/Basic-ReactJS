@@ -42,14 +42,14 @@ export default function ReactForm() {
     promise.then((result) => {
       console.log("35 - " + result);
 
-      navigate("/profile");
+      navigate("/hook-profile");
     });
 
     // se chay khi fun - fail ddược gọi
     promise.catch((error) => {
       console.log("handleSubmit -- " + error);
 
-      navigate("/error");
+      navigate("/123");//page 404
     });
   };
   return (

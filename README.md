@@ -46,9 +46,10 @@ Học FE cơ bản
     -useRef : giống useState nhưng nó sẽ lưu lại sau mỗi lần render - phuf hợp vs conponent Login
 
 #### Link fake img 
-    avatar : https://i.pravatar.cc/?u=${age}
-    img random : https://picsum.photos/id/2/200/200
-    API: https://svcy.myclass.vn/swagger/ui/indexs
+    - avatar : https://i.pravatar.cc/?u=${age}
+    - img random : https://picsum.photos/id/2/200/200
+    - API: https://svcy.myclass.vn/swagger/ui/indexs
+    - link Api Shoes Shop : https://shop.cyberlearn.vn/api/Product
 
 
 #### boostrap 

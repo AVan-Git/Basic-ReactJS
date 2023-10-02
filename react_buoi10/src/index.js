@@ -17,6 +17,8 @@ import DemoNumber from "./pages/UseRedux/DemoNumber/DemoNumber";
 import DemoFacebookApp from "./pages/UseRedux/DemoFacebookApp/DemoFacebookApp";
 import ReactForm from "./pages/HookRouters/ReactForm/ReactForm";
 import Profile from "./pages/HookRouters/ReactForm/Profile";
+import Home from "./pages/Home/Home";
+import Detail from "./pages/Detail/Detail";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -24,6 +26,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="" element={<App />}>
+          <Route index element={<Home />} ></Route>
+          <Route path="detail" element={<Detail />}></Route>
           <Route path="use_state" element={<UseStateDemo />}></Route>
           <Route path="use_effect" element={<UseEffectDemo />}></Route>
           <Route path="use_callback" element={<UseCallBackDemo />}></Route>
