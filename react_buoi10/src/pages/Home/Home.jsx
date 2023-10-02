@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
   let [arrProduct, setArrProduct] = useState([]);
@@ -41,9 +42,9 @@ export default function Home() {
             <div className="card-body">
               <h4 className="card-title">{item.name}</h4>
               <p className="card-text">{item.price} $</p>
-              <button type="button" class="btn btn-primary">
+              <NavLink to={`/detail/${item.id}`} className="btn btn-primary">
                 View Detail
-              </button>
+              </NavLink>
             </div>
           </div>
         </div>

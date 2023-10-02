@@ -37,13 +37,14 @@ Học FE cơ bản
     rcredux: react class component redux
     rxreducer: reducer 
 
-### rfc: react function component
+### hook - rfc: react function component
 
     - useState:
     - useEffect:
     - useCallback - dùng để tối ưu các render
     - useMemo: useConnect-tối ưu về biến || hoặc có thể khai báo ở ngoài
     -useRef : giống useState nhưng nó sẽ lưu lại sau mỗi lần render - phuf hợp vs conponent Login
+    - useParams() -- nhan data truyen theo router
 
 #### Link fake img 
     - avatar : https://i.pravatar.cc/?u=${age}

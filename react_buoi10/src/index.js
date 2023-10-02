@@ -27,7 +27,9 @@ root.render(
       <Routes>
         <Route path="" element={<App />}>
           <Route index element={<Home />} ></Route>
-          <Route path="detail" element={<Detail />}></Route>
+          <Route path="detail" >
+            <Route path=":id" element={<Detail />} ></Route>
+          </Route>
           <Route path="use_state" element={<UseStateDemo />}></Route>
           <Route path="use_effect" element={<UseEffectDemo />}></Route>
           <Route path="use_callback" element={<UseCallBackDemo />}></Route>
