@@ -82,6 +82,9 @@ export default function HearHome() {
                 <NavLink className="dropdown-item" to="/redux_number">
                   Demo redux number
                 </NavLink>
+                <NavLink className="dropdown-item" to="/redux_facebook_app">
+                  Demo Facebook app
+                </NavLink>
                
                 
                 <NavLink className="dropdown-item" to="/">

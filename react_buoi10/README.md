@@ -40,3 +40,6 @@
     -npm i @reduxjs/toolkit
 
 ![...](./images//img_redux.png)
+
+#### BT comment - redux
+![...](./images/img_redux_bt_comment.png)
