@@ -47,5 +47,6 @@
 
 ### Hook router
 
-#### navigate -useParams()
+#### navigate -useParams() - useSearchParams()
 ![...](./images/img_router.png)
+![...](./images/img_useSearchParams.png)

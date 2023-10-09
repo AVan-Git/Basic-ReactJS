@@ -1,14 +1,69 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { NavLink, useSearchParams } from "react-router-dom";
+
+// cal API
+const getProductByKeyworkApi = async (value, setArrProduct) => {
+  try {
+    const result = await axios({
+      url: `https://shop.cyberlearn.vn/api/product?keyword=${value}`,
+      method: "GET",
+    });
+    setArrProduct(result.data.content);
+    console.log(
+      "🚀 ~ file: Search.jsx:14 ~ getProductByKeyworkApi ~ result.data.content:",
+      result.data.content
+    );
+  } catch (err) {
+    console.log(
+      "🚀 ~ file: Search.jsx:16 ~ getProductByKeyworkApi ~ err:",
+      err
+    );
+  }
+};
 
 export default function Search() {
   let [arrProduct, setArrProduct] = useState([]);
+  /**
+   * cung de lay data truyen qua router - navigatie co keyword = useSearchParams() .get("keyword")
+   * Dua du lieu len url : setSearchParams
+   */
+  let [searchParams, setSearchParams] = useSearchParams();
+
+  let [keyword, setKeyword] = useState(searchParams.get("keyword"));
 
   //
-  const handleChange = (e) => {};
+  useEffect(() => {
+    // TH Search component thay doi thi thay doi search trong Search NavBar va url prams(?keyword)
+
+    setSearchParams(
+      {
+        keyword: keyword,
+      },
+      () => {
+        console.log();
+      }
+    );
+    getProductByKeyworkApi(keyword, setArrProduct);
+  }, [keyword]);
+  //
+  useEffect(() => {
+    // TH Search NavBar thay doi thi thay doi search trong component
+    setKeyword(searchParams.get("keyword"));
+  }, [searchParams.get("keyword")]);
+  //
+  const handleChange = (e) => {
+    let { value, id } = e.target;
+
+    setKeyword(value);
+  };
   //
   const handleSubmit = (e) => {
-    e.preventDefaul();
+    e.preventDefault();
+
+    // goi api thuc thi
+
+    getProductByKeyworkApi(keyword, setArrProduct);
   };
   return (
     <form className="container" onSubmit={handleSubmit}>
@@ -19,8 +74,9 @@ export default function Search() {
           <input
             type="text"
             className="form-control"
-            id="keywordRef"
+            id="keyword"
             onChange={handleChange}
+            value={keyword}
           />
           <button type="button" class="btn btn-dark text-white">
             Search
