@@ -19,6 +19,7 @@ import ReactForm from "./pages/HookRouters/ReactForm/ReactForm";
 import Profile from "./pages/HookRouters/ReactForm/Profile";
 import Home from "./pages/Home/Home";
 import Detail from "./pages/Detail/Detail";
+import Search from "./pages/PageSearch/Search";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -39,6 +40,7 @@ root.render(
           <Route path="redux_facebook_app" element={<DemoFacebookApp />}></Route>
           <Route path="hook-form" element={<ReactForm />}></Route>
           <Route path="hook-profile" element={<Profile />}></Route>
+          <Route path="search" element={<Search />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

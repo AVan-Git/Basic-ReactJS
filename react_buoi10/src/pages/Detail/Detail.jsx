@@ -26,7 +26,7 @@ export default function Detail() {
     // chay 2 TH1: dau tien load page
     getbyIdApi();
     // TH2: params.id thay doi
-  }, []);
+  }, [params.id]);
 
   return (
     <div className="container">
@@ -80,7 +80,7 @@ export default function Detail() {
                 alt="Shoe"
               />
               <div className="card-body">
-                <h4 className="card-title">{item.name}</h4>
+                <h4 className="card-title" style={{minHeight:'60px'}}>{item.name}</h4>
                 <p className="card-text">{item.price} $</p>
                 <NavLink to={`/detail/${item.id}`} className="btn btn-primary">
                 View Detail

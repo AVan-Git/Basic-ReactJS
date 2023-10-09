@@ -1,8 +1,11 @@
 //rfc
 import React from "react";
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 
 export default function HearHome() {
+
+  const navigate = useNavigate();
+
   return (
     <>
       <nav className="navbar navbar-expand-sm navbar-dark bg-primary">
@@ -117,11 +120,19 @@ export default function HearHome() {
               </div>
             </li>
           </ul>
-          <form className="d-flex my-2 my-lg-0">
+          {/* //  add chuc nang cho nut search --- su dung useSearchParam*/}
+          <form className="d-flex my-2 my-lg-0" onSubmit={(e) => {
+            e.preventDefault(); 
+            const keyword = document.querySelector('#keyword').value;
+
+            navigate(`/search?keyword=${keyword}`)
+
+          }}  >
             <input
               className="form-control me-sm-2"
               type="text"
               placeholder="Search"
+              id="keyword"
             />
             <button
               className="btn btn-outline-success my-2 my-sm-0"
