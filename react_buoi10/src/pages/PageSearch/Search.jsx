@@ -4,6 +4,7 @@ import { NavLink, useSearchParams } from "react-router-dom";
 
 // cal API
 const getProductByKeyworkApi = async (value, setArrProduct) => {
+    console.log('3.1.2 -> goi api sau lan dau tien load');
   try {
     const result = await axios({
       url: `https://shop.cyberlearn.vn/api/product?keyword=${value}`,
@@ -11,9 +12,9 @@ const getProductByKeyworkApi = async (value, setArrProduct) => {
     });
     setArrProduct(result.data.content);
     console.log(
-      "🚀 ~ file: Search.jsx:14 ~ getProductByKeyworkApi ~ result.data.content:",
-      result.data.content
+      '3.1.3 sau khi api thanh cong -> state thay doi -> giao dien render lai(ket thuc lan 1)'
     );
+    //3.4
   } catch (err) {
     console.log(
       "🚀 ~ file: Search.jsx:16 ~ getProductByKeyworkApi ~ err:",
@@ -21,6 +22,8 @@ const getProductByKeyworkApi = async (value, setArrProduct) => {
     );
   }
 };
+
+let timeout = null;
 
 export default function Search() {
   let [arrProduct, setArrProduct] = useState([]);
@@ -30,39 +33,74 @@ export default function Search() {
    */
   let [searchParams, setSearchParams] = useSearchParams();
 
-  let [keyword, setKeyword] = useState(searchParams.get("keyword"));
+//   let [keyword, setKeyword] = useState(searchParams.get("keyword"));
 
+  // 3.5 : clear
+  if (timeout !== null) {
+    clearTimeout(timeout)
+  }
   //
+  /*
   useEffect(() => {
     // TH Search component thay doi thi thay doi search trong Search NavBar va url prams(?keyword)
 
-    setSearchParams(
-      {
-        keyword: keyword,
-      },
-      () => {
-        console.log();
-      }
-    );
-    getProductByKeyworkApi(keyword, setArrProduct);
+    //2. Chánh TH Call lien tuc - setTimeout sau 1s
+    setTimeout(() => {
+      setSearchParams(
+        {
+          keyword: searchParams.get("keyword"),
+        },
+        () => {
+          console.log();
+        }
+      );
+      getProductByKeyworkApi(keyword, setArrProduct);
+    }, 1000);
   }, [keyword]);
+  */
   //
   useEffect(() => {
     // TH Search NavBar thay doi thi thay doi search trong component
-    setKeyword(searchParams.get("keyword"));
-  }, [searchParams.get("keyword")]);
+    // setKeyword(searchParams.get("keyword"));
+
+    ///3 - luong di
+    //3.1 khi load trang thi ham nay goi api 1 lan
+    console.log('3.1.1 khi load trang thi ham nay goi api 1 lan');
+    // 3.3
+    //2. Chánh TH Call lien tuc - setTimeout sau 1s
+    timeout = setTimeout(() => {
+        let keyword =searchParams.get('keyword');
+        if ( keyword !== null) {
+        getProductByKeyworkApi(keyword, setArrProduct);
+        }
+      }, 1000);
+
+  }, [searchParams.get("keyword")]); // 2.1 khi params url thay doi thi ham nay se duoc kich hoat
   //
   const handleChange = (e) => {
-    let { value, id } = e.target;
+    console.log('3.2 khi nguoi dung go tren thanh search thi lay gia tri value gan vao thanh url');
 
-    setKeyword(value);
+    let { value } = e.target;
+    
+    // lam thay doi url & kich useEffect chay lan 2
+    console.log('3.2 lam thay doi url & kich useEffect chay lan 2');
+    setSearchParams(
+        {
+          keyword: value,
+        },
+        () => {
+          console.log();
+        }
+      );
   };
+  //
+
   //
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // goi api thuc thi
-
+    let keyword =searchParams.get('keyword');
     getProductByKeyworkApi(keyword, setArrProduct);
   };
   return (
@@ -76,7 +114,7 @@ export default function Search() {
             className="form-control"
             id="keyword"
             onChange={handleChange}
-            value={keyword}
+            value={searchParams.get("keyword")}
           />
           <button type="button" class="btn btn-dark text-white">
             Search
