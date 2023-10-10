@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { setArrProductAction } from "../../redux/reducers/productReducer";
+import { getProductApi, setArrProductAction } from "../../redux/reducers/productReducer";
 
 export default function HomeReducer() {
   // let [arrProduct, setArrProduct] = useState([]);
@@ -76,7 +76,7 @@ export default function HomeReducer() {
     //   }
     // };
 
-    const action = getApiProduct;
+    const action = getProductApi;
       // 3. dispath action chinh
       dispatch(action);
   };
@@ -95,7 +95,7 @@ export default function HomeReducer() {
             <div className="card-body">
               <h4 className="card-title">{item.name}</h4>
               <p className="card-text">{item.price} $</p>
-              <NavLink to={`/detail/${item.id}`} className="btn btn-primary">
+              <NavLink to={`/detail-redux/${item.id}`} className="btn btn-primary">
                 View Detail
               </NavLink>
             </div>

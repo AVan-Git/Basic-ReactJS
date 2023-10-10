@@ -23,6 +23,7 @@ import Search from "./pages/PageSearch/Search";
 import DemoUseRoute from "./pages/DemoUseRoute/DemoUseRoute";
 import DemoAnimation from "./pages/DemoAnimation/DemoAnimation";
 import HomeReducer from "./pages/Home/HomeReducer";
+import DetailRedux from "./pages/Detail/DetailRedux";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -34,6 +35,9 @@ root.render(
           <Route path="home-reducer" element={<HomeReducer />} ></Route>
           <Route path="detail" >
             <Route path=":id" element={<Detail />} ></Route>
+          </Route>
+          <Route path="detail-redux" >
+            <Route path=":id" element={<DetailRedux />} ></Route>
           </Route>
           <Route path="use_state" element={<UseStateDemo />}></Route>
           <Route path="use_effect" element={<UseEffectDemo />}></Route>

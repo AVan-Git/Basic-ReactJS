@@ -6,7 +6,10 @@ import axios from "axios";
 const initialState = {
     arrProduct: [
       {id:1, name:'Shoe Nike', price: 1230, image:'https://picsum.photos/200/200'},
-    ]
+    ],
+    productDetail:{
+      id:1, name:'Shoe Nike', price: 1230, image:'https://picsum.photos/200/200'
+    }
 };
 
 const productReducer = createSlice({
@@ -18,17 +21,21 @@ const productReducer = createSlice({
       const arrProduct = action.payload;
       //cạp nhật lại state
       state.arrProduct = arrProduct;
+    },
+    setProductDetail: (state, action) => {
+      const itemDetail = action.payload;
+      state.productDetail = itemDetail;
     }
   }
 });
 // exp nay de sử dụng theo cách 2
-export const { setArrProductAction } = productReducer.actions;
+export const { setArrProductAction, setProductDetail  } = productReducer.actions;
 export default productReducer.reducer;
 
 
 
 
-// --------------------  Action Api-------------------
+// --------------------  Action Api - action loai 2 -------------------
 
 export const getProductApi = async (dispatch2) => {
   //su ly api o day
@@ -51,3 +58,23 @@ export const getProductApi = async (dispatch2) => {
     console.log("🚀 ~ file: HomeReducer.jsx:62 ~ action ~ error:", error);
   }
 };
+
+// closure function
+export const getProductDetailById_Api = (idProduct) => {
+  return async  dispatch => {
+    // logic api goi tai day
+    try {
+      const result = await axios({
+        url:`https://shop.cyberlearn.vn/api/Product/getbyid?id=${idProduct}`,
+        method:'GET'
+      })
+      // dua data gui len action loai 1 dua len reducer
+      const actionLoai1 = setProductDetail(result.data.content)
+
+      dispatch(actionLoai1);
+    } catch (error) {
+      console.log("🚀 ~ file: productReducer.jsx:65 ~ error:", error)
+      
+    }
+  }
+}
