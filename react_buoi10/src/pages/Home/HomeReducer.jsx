@@ -13,6 +13,15 @@ export default function HomeReducer() {
   const dispatch = useDispatch();
 
   const getApiProduct = async () => {
+    /**
+     * action dang 1 :
+     *    action = {
+     *      type:action_name,
+     *        payload:data
+     * }
+     *
+     * */
+
     try {
       let result = await axios({
         url: "https://shop.cyberlearn.vn/api/Product",
@@ -36,8 +45,43 @@ export default function HomeReducer() {
     }
   };
 
+  const getApiProduct_TH2_Redux = async () => {
+    /**
+     * action dang 2 : co trong redux toolkit
+         action = (dispatch2, getState) => {
+            // logic xử lý ở đây sau đó có dữ liệu  sẽ dùng tham số dispatch2 ( này ở chỗ middleware -> redux || img minh hoa middleware),  để đưa lên redux hoặc thực hiện tiếp 1 logic khác
+         }
+     *
+     * */
+
+    const action = async (dispatch2) => {
+      //su ly api o day
+      try {
+        let result = await axios({
+          url: "https://shop.cyberlearn.vn/api/Product",
+          method: "GET",
+        });
+        // 3. dispatch len redux
+        /**
+         * action = {
+         *  type:'productReducer/setArrProductAction',
+         *  payload:result.data.content
+         * }
+         */
+        const action = setArrProductAction(result.data.content);
+
+        dispatch2(action);
+      } catch (error) {
+        console.log("🚀 ~ file: HomeReducer.jsx:62 ~ action ~ error:", error);
+      }
+    };
+    
+      // 3. dispath action chinh
+      dispatch(action);
+  };
+
   useEffect(() => {
-    getApiProduct();
+    getApiProduct_TH2_Redux();
   }, []);
 
   //
