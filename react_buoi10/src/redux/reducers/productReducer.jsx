@@ -1,6 +1,7 @@
 //rxslice
 
 import { createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialState = {
     arrProduct: [
@@ -23,3 +24,30 @@ const productReducer = createSlice({
 // exp nay de sử dụng theo cách 2
 export const { setArrProductAction } = productReducer.actions;
 export default productReducer.reducer;
+
+
+
+
+// --------------------  Action Api-------------------
+
+export const getProductApi = async (dispatch2) => {
+  //su ly api o day
+  try {
+    let result = await axios({
+      url: "https://shop.cyberlearn.vn/api/Product",
+      method: "GET",
+    });
+    // 3. dispatch len redux
+    /**
+     * action = {
+     *  type:'productReducer/setArrProductAction',
+     *  payload:result.data.content
+     * }
+     */
+    const action = setArrProductAction(result.data.content);
+
+    dispatch2(action);
+  } catch (error) {
+    console.log("🚀 ~ file: HomeReducer.jsx:62 ~ action ~ error:", error);
+  }
+};

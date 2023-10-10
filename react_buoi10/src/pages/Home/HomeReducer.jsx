@@ -53,29 +53,30 @@ export default function HomeReducer() {
          }
      *
      * */
+         // 4. chuyen fun sang productReducer.jsx de quan ly
+    // const action = async (dispatch2) => {
+    //   //su ly api o day
+    //   try {
+    //     let result = await axios({
+    //       url: "https://shop.cyberlearn.vn/api/Product",
+    //       method: "GET",
+    //     });
+    //     // 3. dispatch len redux
+    //     /**
+    //      * action = {
+    //      *  type:'productReducer/setArrProductAction',
+    //      *  payload:result.data.content
+    //      * }
+    //      */
+    //     const action = setArrProductAction(result.data.content);
 
-    const action = async (dispatch2) => {
-      //su ly api o day
-      try {
-        let result = await axios({
-          url: "https://shop.cyberlearn.vn/api/Product",
-          method: "GET",
-        });
-        // 3. dispatch len redux
-        /**
-         * action = {
-         *  type:'productReducer/setArrProductAction',
-         *  payload:result.data.content
-         * }
-         */
-        const action = setArrProductAction(result.data.content);
+    //     dispatch2(action);
+    //   } catch (error) {
+    //     console.log("🚀 ~ file: HomeReducer.jsx:62 ~ action ~ error:", error);
+    //   }
+    // };
 
-        dispatch2(action);
-      } catch (error) {
-        console.log("🚀 ~ file: HomeReducer.jsx:62 ~ action ~ error:", error);
-      }
-    };
-    
+    const action = getApiProduct;
       // 3. dispath action chinh
       dispatch(action);
   };
