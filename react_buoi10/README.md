@@ -9,6 +9,10 @@
     - memo(react) giúp găn render khi khong su dung
     - fix lỗi khi memo trong khi chuyền function qua các các component thì các fun dó sẽ dược làm mới dấn đến sẽ render các component không dùng -> fix bằng hàm useCallback(fun, [bien_thay_doi])
     - link Api Shoes Shop : https://shop.cyberlearn.vn/api/Product
+    - custom hook: 
+        - npm  i react-use
+        - link git: https://github.com/streamich/react-use
+        - demo useCookie - luu data xuong ổ đĩa ??
 
 ## Anh minh hoa
 ![...](./images/img_code.png)

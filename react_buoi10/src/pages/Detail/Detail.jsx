@@ -16,7 +16,7 @@ export default function Detail() {
       });
       // console.log(result);
       setProductDetail(result.data.content);
-      console.log("🚀 ~ file: Detail.jsx:19 ~ getbyIdApi ~ result.data.content:", result.data.content)
+      // console.log("🚀 ~ file: Detail.jsx:19 ~ getbyIdApi ~ result.data.content:", result.data.content)
     } catch (error) {
       console.log("🚀 ~ file: Detail.jsx:13 ~ getbyIdApi ~ error:", error);
     }

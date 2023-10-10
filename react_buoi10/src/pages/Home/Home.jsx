@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Home() {
   let [arrProduct, setArrProduct] = useState([]);
-  console.log("🚀 ~ file: Home.jsx:7 ~ Home ~ arrProduct:", arrProduct);
+  // console.log("🚀 ~ file: Home.jsx:7 ~ Home ~ arrProduct:", arrProduct);
 
   const getApiProduct = async () => {
     try {

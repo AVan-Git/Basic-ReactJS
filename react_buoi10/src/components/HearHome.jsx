@@ -63,6 +63,9 @@ export default function HearHome() {
                 <NavLink className="dropdown-item" to="/use_ref">
                   Demo useRef
                 </NavLink>
+                <NavLink className="dropdown-item" to="/custom-hook">
+                  Custom - hook (useRoute)
+                </NavLink>
                 
                 <NavLink className="dropdown-item" to="/">
                   My home
