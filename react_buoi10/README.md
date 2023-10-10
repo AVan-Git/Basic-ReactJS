@@ -13,6 +13,7 @@
         - npm  i react-use
         - link git: https://github.com/streamich/react-use
         - demo useCookie - luu data xuong ổ đĩa ??
+        - https://stackoverflow.com/questions/14573223/set-cookie-and-get-cookie-with-javascript
 
 ## Anh minh hoa
 ![...](./images/img_code.png)
