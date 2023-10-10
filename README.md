@@ -54,7 +54,9 @@ Học FE cơ bản
     - avatar : https://i.pravatar.cc/?u=${age}
     - img random : https://picsum.photos/id/2/200/200
     - API: https://svcy.myclass.vn/swagger/ui/indexs
-    - link Api Shoes Shop : https://shop.cyberlearn.vn/api/Product
+    - link Api Shoes Shop : 
+            - https://shop.cyberlearn.vn/api/Product
+            - https://shop.cyberlearn.vn/swagger/index.html
 
 
 #### boostrap 
@@ -75,6 +77,8 @@ Học FE cơ bản
     the lien kết các trang lại vs nhau Nav-link  react router dom
 
     fa5- fontawesom
-
+### middleware redux toolkit
+#### viblo.asia
+![ReduxAsyncDataFlowDiagram ](https://redux.js.org/assets/images/ReduxAsyncDataFlowDiagram-d97ff38a0f4da0f327163170ccc13e80.gif)
     
     

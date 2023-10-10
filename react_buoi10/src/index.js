@@ -22,6 +22,7 @@ import Detail from "./pages/Detail/Detail";
 import Search from "./pages/PageSearch/Search";
 import DemoUseRoute from "./pages/DemoUseRoute/DemoUseRoute";
 import DemoAnimation from "./pages/DemoAnimation/DemoAnimation";
+import HomeReducer from "./pages/Home/HomeReducer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -30,6 +31,7 @@ root.render(
       <Routes>
         <Route path="" element={<App />}>
           <Route index element={<Home />} ></Route>
+          <Route path="home-reducer" element={<HomeReducer />} ></Route>
           <Route path="detail" >
             <Route path=":id" element={<Detail />} ></Route>
           </Route>

@@ -17,6 +17,7 @@
     - npm i react-spring  
         - lib animation
         https://www.react-spring.dev/docs/components/use-spring
+    - middleware redux toolkit
     
 ## Anh minh hoa
 ![...](./images/img_code.png)
@@ -58,3 +59,7 @@
 #### navigate -useParams() - useSearchParams()
 ![...](./images/img_router.png)
 ![...](./images/img_useSearchParams.png)
+
+### middleware redux toolkit
+#### viblo.asia
+![ReduxAsyncDataFlowDiagram ](https://redux.js.org/assets/images/ReduxAsyncDataFlowDiagram-d97ff38a0f4da0f327163170ccc13e80.gif)

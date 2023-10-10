@@ -29,6 +29,11 @@ export default function HearHome() {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link" to="/home-reducer" aria-current="page">
+                Home-Reducer
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" to="#">
                 Link
               </NavLink>
