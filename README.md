@@ -30,6 +30,9 @@ Học FE cơ bản
 
     npm build
 
+    npm  i react-use            -- hook custom
+    npm i react-spring          -- animation
+
 ###
     tao nhanh jsx: 
     rfc: react function component

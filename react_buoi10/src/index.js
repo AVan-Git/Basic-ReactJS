@@ -21,6 +21,7 @@ import Home from "./pages/Home/Home";
 import Detail from "./pages/Detail/Detail";
 import Search from "./pages/PageSearch/Search";
 import DemoUseRoute from "./pages/DemoUseRoute/DemoUseRoute";
+import DemoAnimation from "./pages/DemoAnimation/DemoAnimation";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -43,6 +44,7 @@ root.render(
           <Route path="hook-profile" element={<Profile />}></Route>
           <Route path="search" element={<Search />}></Route>
           <Route path="custom-hook" element={<DemoUseRoute />}></Route>
+          <Route path="animation" element={<DemoAnimation />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

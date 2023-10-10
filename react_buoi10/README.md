@@ -14,7 +14,10 @@
         - link git: https://github.com/streamich/react-use
         - demo useCookie - luu data xuong ổ đĩa ??
         - https://stackoverflow.com/questions/14573223/set-cookie-and-get-cookie-with-javascript
-
+    - npm i react-spring  
+        - lib animation
+        https://www.react-spring.dev/docs/components/use-spring
+    
 ## Anh minh hoa
 ![...](./images/img_code.png)
 ![...](./images/img_minhHoaBuoi10.png)
