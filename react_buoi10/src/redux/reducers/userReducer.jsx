@@ -5,11 +5,11 @@ import axios from "axios";
 import { ACCESS_TOKEN, USER_LOGIN, getStoreJSON, setCookie, setStore, setStoreJSON } from "../../unit/config";
 
 const initialState = {
-    // userLogin: getStoreJSON(USER_LOGIN),
-    userLogin: {
-        email: '',
-        accessToken: ''
-    },
+    // userLogin: {
+    //     email: '',
+    //     accessToken: ''
+    // },
+    userLogin: getStoreJSON(USER_LOGIN),
 };
 
 const userReducer = createSlice({
@@ -49,7 +49,7 @@ export const  signinApi = (userLogin) => {
             setCookie(result.data.content.accessToken, 30, ACCESS_TOKEN)
 
             // luu lai email
-            // setStoreJSON(USER_LOGIN, result.data.content)
+            setStoreJSON(USER_LOGIN, result.data.content)
 
             // dua len reducer
             const action = setUserLoginAction(result.data.content)
