@@ -33,6 +33,7 @@ Học FE cơ bản
     npm  i react-use            -- hook custom
     npm i react-spring          -- animation
     npm install formik --save   -- lib giúp quản lý form
+    npm install yup --save      -- lib - regex || validationSchema
 
 ###
     tao nhanh jsx: 
@@ -82,7 +83,7 @@ Học FE cơ bản
 #### viblo.asia
 ![ReduxAsyncDataFlowDiagram ](https://redux.js.org/assets/images/ReduxAsyncDataFlowDiagram-d97ff38a0f4da0f327163170ccc13e80.gif)
 
-### lib cho form 
+### lib cho form login
 
 * [Link formik ](https://formik.org/) Build forms in React, without the tears 
     

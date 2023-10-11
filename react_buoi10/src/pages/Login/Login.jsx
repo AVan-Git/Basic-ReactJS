@@ -1,8 +1,39 @@
+import { useFormik } from "formik";
 import React from "react";
+import { useDispatch } from "react-redux";
+import * as Yup from 'yup'
+import { signinApi } from "../../redux/reducers/userReducer";
 
 export default function Login(props) {
+
+    const dispatch = useDispatch();
+
+    const formik = useFormik({
+        initialValues:{ // de ten gia gi ban dau giong vs name="?"
+            email:'',
+            password:'',
+        },
+        validationSchema:Yup.object().shape({
+            // dịnh nghĩa các validation cho cac trừờng naof
+            // .matches() kiem tra regex
+            email: Yup.string().required("Email không được bỏ trống!").email('Email không dúng định dạng !') ,
+            password: Yup.string().required("Password không được bỏ trống!").min(6, 'Password từ 6 - 32 ký tự !')
+                .max(32,'Password từ 6 - 32 ký tự !')
+                //.matches(/Avan/, 'Password phải có từ Avan')
+        })
+        ,
+        onSubmit:(values) => {
+            console.log("🚀 ~ file: Login.jsx:12 ~ Login ~ values:", values)
+            
+            const action = signinApi(values)
+            dispatch(action);
+
+        }
+    });
+    // console.log("🚀 ~ file: Login.jsx:7 ~ Login ~ formik:", formik)
+
   return (
-    <form className="container" style={{ textAlign: "left" }}>
+    <form className="container" style={{ textAlign: "left" }} onSubmit={formik.handleSubmit}>
       <h3 className="text-center text-danger">Login</h3>
 
       <div className="mb-3 form-group">
@@ -16,9 +47,11 @@ export default function Login(props) {
           id="email"
           aria-describedby="errEmail"
           placeholder="Enter email..."
+          onBlur={formik.handleBlur}
+          onChange={formik.handleChange}
         />
-        <small id="errEmail" className="form-text text-muted ms-2">
-          Help text
+        <small id="errEmail" className="form-text text-danger ms-2">
+          {formik.errors.email? formik.errors.email:'' }
         </small>
       </div>
 
@@ -33,9 +66,11 @@ export default function Login(props) {
           id="password"
           aria-describedby="errPassword"
           placeholder="Enter Password..."
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
         />
-        <small id="errPassword" className="form-text text-muted ms-2">
-          Help text
+        <small id="errPassword" className="form-text text-danger ms-2">
+        {formik.errors.password? formik.errors.password:'' }
         </small>
       </div>
       <div className="form-group">
