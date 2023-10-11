@@ -1,11 +1,34 @@
 //rfc
 import React from "react";
-import {NavLink, useNavigate} from "react-router-dom";
+import { useSelector } from "react-redux";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function HearHome() {
-
   const navigate = useNavigate();
 
+  // useSelector lay data tu redux
+  const { userLogin } = useSelector((state) => state.userReducer);
+
+  // kiem tra khi chua login thi hien login
+  // login roi thi hien link hac
+  const renderNavLinkLogin = () => {
+    if (userLogin) {
+      return (
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/profile" aria-current="page">
+            Hello {userLogin.email}
+          </NavLink>
+        </li>
+      );
+    }
+    return (
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/login" aria-current="page">
+          Login
+        </NavLink>
+      </li>
+    );
+  };
   return (
     <>
       <nav className="navbar navbar-expand-sm navbar-dark bg-primary">
@@ -25,19 +48,20 @@ export default function HearHome() {
           <ul className="navbar-nav me-auto mt-2 mt-lg-0">
             <li className="nav-item">
               <NavLink className="nav-link action" to="/" aria-current="page">
-                Home 
+                Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/home-reducer" aria-current="page">
+              <NavLink
+                className="nav-link"
+                to="/home-reducer"
+                aria-current="page"
+              >
                 Home-Reducer
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/login" aria-current="page">
-                Login
-              </NavLink>
-            </li>
+            {renderNavLinkLogin()}
+
             <li className="nav-item">
               <NavLink className="nav-link" to="#">
                 Link
@@ -79,11 +103,10 @@ export default function HearHome() {
                 <NavLink className="dropdown-item" to="/animation">
                   Animation
                 </NavLink>
-                
+
                 <NavLink className="dropdown-item" to="/">
                   My home
                 </NavLink>
-                
               </div>
             </li>
             <li className="nav-item dropdown">
@@ -104,12 +127,10 @@ export default function HearHome() {
                 <NavLink className="dropdown-item" to="/redux_facebook_app">
                   Demo Facebook app
                 </NavLink>
-               
-                
+
                 <NavLink className="dropdown-item" to="/">
                   My home
                 </NavLink>
-                
               </div>
             </li>
 
@@ -128,22 +149,23 @@ export default function HearHome() {
                 <NavLink className="dropdown-item" to="/hook-form">
                   Demo router navigate
                 </NavLink>
-                
+
                 <NavLink className="dropdown-item" to="/">
                   My home
                 </NavLink>
-                
               </div>
             </li>
           </ul>
           {/* //  add chuc nang cho nut search --- su dung useSearchParam*/}
-          <form className="d-flex my-2 my-lg-0" onSubmit={(e) => {
-            e.preventDefault(); 
-            const keyword = document.querySelector('#keyword').value;
+          <form
+            className="d-flex my-2 my-lg-0"
+            onSubmit={(e) => {
+              e.preventDefault();
+              const keyword = document.querySelector("#keyword").value;
 
-            navigate(`/search?keyword=${keyword}`)
-
-          }}  >
+              navigate(`/search?keyword=${keyword}`);
+            }}
+          >
             <input
               className="form-control me-sm-2"
               type="text"
