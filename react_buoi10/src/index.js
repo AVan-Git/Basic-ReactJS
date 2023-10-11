@@ -24,6 +24,7 @@ import DemoUseRoute from "./pages/DemoUseRoute/DemoUseRoute";
 import DemoAnimation from "./pages/DemoAnimation/DemoAnimation";
 import HomeReducer from "./pages/Home/HomeReducer";
 import DetailRedux from "./pages/Detail/DetailRedux";
+import Login from "./pages/Login/Login";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -51,6 +52,7 @@ root.render(
           <Route path="search" element={<Search />}></Route>
           <Route path="custom-hook" element={<DemoUseRoute />}></Route>
           <Route path="animation" element={<DemoAnimation />}></Route>
+          <Route path="login" element={<Login />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

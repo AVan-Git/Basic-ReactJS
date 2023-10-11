@@ -34,6 +34,11 @@ export default function HearHome() {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link" to="/login" aria-current="page">
+                Login
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" to="#">
                 Link
               </NavLink>

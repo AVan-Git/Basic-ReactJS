@@ -32,6 +32,7 @@ Học FE cơ bản
 
     npm  i react-use            -- hook custom
     npm i react-spring          -- animation
+    npm install formik --save   -- lib giúp quản lý form
 
 ###
     tao nhanh jsx: 
@@ -80,5 +81,9 @@ Học FE cơ bản
 ### middleware redux toolkit
 #### viblo.asia
 ![ReduxAsyncDataFlowDiagram ](https://redux.js.org/assets/images/ReduxAsyncDataFlowDiagram-d97ff38a0f4da0f327163170ccc13e80.gif)
+
+### lib cho form 
+
+* [Link formik ](https://formik.org/) Build forms in React, without the tears 
     
     
