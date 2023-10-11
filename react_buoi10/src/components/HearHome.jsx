@@ -15,7 +15,7 @@ export default function HearHome() {
     if (userLogin) {
       return (
         <li className="nav-item">
-          <NavLink className="nav-link" to="/profile" aria-current="page">
+          <NavLink className="nav-link" to="/hook-profile" aria-current="page">
             Hello {userLogin.email}
           </NavLink>
         </li>

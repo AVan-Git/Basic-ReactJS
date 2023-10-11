@@ -17,8 +17,8 @@ export default function Login(props) {
             // dịnh nghĩa các validation cho cac trừờng naof
             // .matches() kiem tra regex
             email: Yup.string().required("Email không được bỏ trống!").email('Email không dúng định dạng !') ,
-            password: Yup.string().required("Password không được bỏ trống!").min(6, 'Password từ 6 - 32 ký tự !')
-                .max(32,'Password từ 6 - 32 ký tự !')
+            password: Yup.string().required("Password không được bỏ trống!").min(3, 'Password từ 3 - 32 ký tự !')
+                .max(32,'Password từ 3 - 32 ký tự !')
                 //.matches(/Avan/, 'Password phải có từ Avan')
         })
         ,
@@ -77,10 +77,18 @@ export default function Login(props) {
         <button type="submit" class="btn btn-primary">
           Login
         </button>
-        <button type="reset" class="btn btn-secondary mx-2">
+        <button type="reset" onClick={()=> {
+            console.log('khaido@gmail.com - 123');
+        }} class="btn btn-secondary mx-2">
           Clear
         </button>
       </div>
+
+      <button type="button" onClick={()=> {
+            alert('khaido@gmail.com - 123');
+        }} class="btn btn-secondary my-2">
+          account
+        </button>
     </form>
   );
 }
