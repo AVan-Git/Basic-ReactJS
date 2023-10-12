@@ -12,6 +12,11 @@ Học FE cơ bản
     - HOC: Higher order component  : sử dụng để tái sử dụng tren 1 giao dien
 
 ![...](./images/img_cautructhumuc.png)
+
+## lib - cho 1 du an
+
+    boostrap 
+
 ## lệnh cơ bản
 
     tạo project: npx create-react-app demo-reactjs 
