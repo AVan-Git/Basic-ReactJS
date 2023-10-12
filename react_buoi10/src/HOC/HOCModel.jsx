@@ -1,24 +1,30 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 export default function HOCModel(props) {
-  console.log("🚀 ~ file: HOCModel.jsx:4 ~ HOCModel ~ props:", props)
+
+
+  // HOC theo reducer
+  const {title, Component, Component2} = useSelector(state => state.modalReducer);
+
+  
   return (
     <div>
       <div>
         {/* Modal trigger button */}
-        <button
+        {/* <button
           type="button"
           className="btn btn-primary btn-lg"
           data-bs-toggle="modal"
-          data-bs-target={`#${props.id}`}
+          data-bs-target={`#modalID`}
         >
           Launch
-        </button>
+        </button> */}
         {/* Modal Body */}
         {/* if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard */}
         <div
           className="modal fade"
-          id={props.id}
+          id='modalID'
           tabIndex={-1}
           data-bs-backdrop="static"
           data-bs-keyboard="false"
@@ -33,7 +39,7 @@ export default function HOCModel(props) {
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title" id="modalTitleId">
-                  {props.title}
+                  {title}
                 </h5>
                 <button
                   type="button"
@@ -43,7 +49,7 @@ export default function HOCModel(props) {
                 />
               </div>
               <div className="modal-body">
-                <props.Component />
+                <Component />
 
               </div>
               <div className="modal-footer">
