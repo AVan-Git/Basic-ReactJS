@@ -1,3 +1,5 @@
+import axios from "axios";
+
 // luu data ra local storage
 export const configs = {
   setStore: (name, value) => {
@@ -71,3 +73,30 @@ export const {
   ACCESS_TOKEN,
   USER_LOGIN,
 } = configs;
+
+
+
+// cấu hình  interceptor (Cau hình cho các  request và response) 
+const TOKEN_CYBERSOFT = 'z123456';
+
+export const http = axios.create({
+  baseURL:`https://shop.cyberlearn.vn/api`,
+  timeout:6000// thoi gian duy tri 600s
+})
+console.log("🚀 ~ file: config.js:86 ~ http:", http)
+
+// cấu hình request 
+http.interceptors.request.use((configs) => {
+
+  // cau hinh header  add them  thuoc tinh  Authorization
+  configs.headers = {...configs.headers, 
+    ['Authorization'] : `Bearer ${getStore(ACCESS_TOKEN)}`,
+    ['TokenCybersoft'] : TOKEN_CYBERSOFT
+  }
+
+  return configs;
+
+}, (err) => {
+  // cau hinh err 
+  return Promise.reject(err);
+})

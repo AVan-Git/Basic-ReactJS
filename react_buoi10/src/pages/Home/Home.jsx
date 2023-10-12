@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { http } from "../../unit/config";
 
 export default function Home() {
   let [arrProduct, setArrProduct] = useState([]);
@@ -8,10 +9,12 @@ export default function Home() {
 
   const getApiProduct = async () => {
     try {
-      let result = await axios({
-        url: "https://shop.cyberlearn.vn/api/Product",
-        method: "GET",
-      });
+      // let result = await axios({
+      //   url: "https://shop.cyberlearn.vn/api/Product",
+      //   method: "GET",
+      // });
+      let result = await http('/Product');
+
       // console.log("🚀 ~ file: Home.jsx:14 ~ getApiProduct ~ result:", result);
       setArrProduct(result.data.content);
     } catch (err) {

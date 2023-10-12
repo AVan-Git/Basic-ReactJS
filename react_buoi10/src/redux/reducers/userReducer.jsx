@@ -7,6 +7,7 @@ import {
   USER_LOGIN,
   getStore,
   getStoreJSON,
+  http,
   setCookie,
   setStore,
   setStoreJSON,
@@ -40,16 +41,16 @@ export default userReducer.reducer;
 
 export const signinApi = (userLogin) => {
   // userLogin = {email:'', password:''}
-
+let user1 = {email: 'khaido@gmail.com', password: '123'}
   return async (dispatch2) => {
     try {
-      let result = await axios({
-        url: "https://shop.cyberlearn.vn/api/Users/signin",
-        method: "POST",
-        data: userLogin,
-      });
+      // let result = await axios({
+      //   url: "https://shop.cyberlearn.vn/api/Users/signin",
+      //   method: "POST",
+      //   data: userLogin,
+      // });
+      let result = await http.post(`/Users/signin`, user1);
 
-      console.log(result);
       // thanh cong
       // luu lai token 2 cho
       setStore(ACCESS_TOKEN, result.data.content.accessToken);
@@ -64,12 +65,13 @@ export const signinApi = (userLogin) => {
 
       // dang nhập thanh cong thi chuyển den trang profile
 
-      history.push('/hook-profile')
-
+      history.push("/hook-profile");
     } catch (error) {
       console.log("🚀 ~ file: userReducer.jsx:34 ~ signinApi ~ error:", error);
+      console.log(http);
+
       // DNhap khogn thanh cong thi quay lai login
-      alert('Đăng nhập không thành công. Sai thông tin')
+      alert("Đăng nhập không thành công. Sai thông tin");
       history.push('/login')
     }
   };
@@ -79,15 +81,17 @@ export const signinApi = (userLogin) => {
 export const getProfileApi = () => {
   return async (dispatch2) => {
     try {
-      let result = await axios({
-        url: "https://shop.cyberlearn.vn/api/Users/getProfile",
-        method: "POST",
-        // data: //dữ liệu người dùng nhập, chọn, thay đổi
-        // headers: {} //1 lượng data để dev sử lý
-        headers: {
-          Authorization: `Bearer ${getStore(ACCESS_TOKEN)}`,
-        },
-      });
+      // let result = await axios({
+      //   url: "https://shop.cyberlearn.vn/api/Users/getProfile",
+      //   method: "POST",
+      //   // data: //dữ liệu người dùng nhập, chọn, thay đổi
+      //   // headers: {} //1 lượng data để dev sử lý
+      //   headers: {
+      //     Authorization: `Bearer ${getStore(ACCESS_TOKEN)}`,
+      //   },
+      // });
+
+      let result = await http.post("/Users/getProfile");
 
       // tao action creator  => dispatch len redux
       const action = setUserLoginAction(result.data.content);
@@ -98,11 +102,9 @@ export const getProfileApi = () => {
         error
       );
       // khi chua dang nhap thi phai TB Dang nhap moi duco sd trang
-      alert('Chưa đăng nhập hệ thống !!');
+      // alert("Chưa đăng nhập hệ thống !!");
       // tra ve trang login
-      history.push('/login')
-      
-       
+      // history.push("/login");
     }
   };
 };
