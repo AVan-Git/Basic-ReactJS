@@ -37,7 +37,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
     <HistoryRouter history={history}>
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
         <Routes>
           <Route path="" element={<App />}>
             <Route index element={<Home />}></Route>
@@ -66,7 +66,7 @@ root.render(
             <Route path="login" element={<Login />}></Route>
           </Route>
         </Routes>
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
     </HistoryRouter>
   </Provider>
 );

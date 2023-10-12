@@ -11,6 +11,7 @@ import {
   setStore,
   setStoreJSON,
 } from "../../unit/config";
+import { history } from "../../index";
 
 const initialState = {
   // userLogin: {
@@ -60,8 +61,16 @@ export const signinApi = (userLogin) => {
       // dua len reducer
       const action = setUserLoginAction(result.data.content);
       dispatch2(action);
+
+      // dang nhập thanh cong thi chuyển den trang profile
+
+      history.push('/hook-profile')
+
     } catch (error) {
       console.log("🚀 ~ file: userReducer.jsx:34 ~ signinApi ~ error:", error);
+      // DNhap khogn thanh cong thi quay lai login
+      alert('Đăng nhập không thành công. Sai thông tin')
+      history.push('/login')
     }
   };
 };
