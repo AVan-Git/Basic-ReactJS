@@ -87,5 +87,15 @@ Học FE cơ bản
 ### lib cho form login
 
 * [Link formik ](https://formik.org/) Build forms in React, without the tears 
+
+### Status Code 
+    statusCode: ma ket qua tra ve do backEnd quy dinh
+    200(Success): thanh cong
+    201(created) : tao gia tri thanh cong  tren server ( thuong dung 200)
+    400(Bad Request): khongo ton tai duong dan
+    404(Not Found): khongo tim thay du lieu
+    401(UnAuthorrize): Khong co quyen truy cap
+    403(ForBiden): token chua du quyen truy cap
+    500(Error in server) : loi say ra tren server (Nguyeen nhan do fontend hoac backEnd tuy tinh huong) 
     
     

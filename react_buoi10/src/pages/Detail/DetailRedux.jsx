@@ -69,7 +69,7 @@ export default function DetailRedux() {
               */}
           {productDetail.relatedProducts?.map((item, index) => {
             return (
-              <div className="col-md-3 mt-2">
+              <div className="col-md-3 mt-2" key={index}>
                 <div className="card">
                   <img className="card-img-top" src={item.image} alt="Shoe" />
                   <div className="card-body">

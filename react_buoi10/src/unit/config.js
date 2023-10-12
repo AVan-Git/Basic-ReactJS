@@ -1,4 +1,6 @@
 import axios from "axios";
+import { history } from "..";
+
 
 // luu data ra local storage
 export const configs = {
@@ -98,5 +100,38 @@ http.interceptors.request.use((configs) => {
 
 }, (err) => {
   // cau hinh err 
+  return Promise.reject(err);
+})
+
+/*
+  statusCode: ma ket qua tra ve do backEnd quy dinh
+  200(Success): thanh cong
+  201(created) : tao gia tri thanh cong  tren server ( thuong dung 200)
+  400(Bad Request): khongo ton tai duong dan
+  404(Not Found): khongo tim thay du lieu
+  401(UnAuthorrize): Khong co quyen truy cap
+  403(ForBiden): token chua du quyen truy cap
+  500(Error in server) : loi say ra tren server (Nguyeen nhan do fontend hoac backEnd tuy tinh huong) 
+*/
+
+http.interceptors.response.use((response) => {
+  // console.log("🚀 ~ file: config.js:120 ~ http.interceptors.response.use ~ response:", response)
+
+  return response;
+},err => {
+  let statusCode = err.response.status;
+  console.log(statusCode);
+  
+  // console.log(err);
+  if (statusCode === 400 || statusCode === 404) {
+     
+    history.push('/')
+  }
+  if (statusCode === 401 || statusCode === 403) {
+    alert('Token không hợp lệ! Vui lòng đăng nhập lại!')
+    history.push('/login')
+  }
+
+
   return Promise.reject(err);
 })

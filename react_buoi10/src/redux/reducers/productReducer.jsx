@@ -2,6 +2,7 @@
 
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { http } from "../../unit/config";
 
 const initialState = {
     arrProduct: [
@@ -64,10 +65,12 @@ export const getProductDetailById_Api = (idProduct) => {
   return async  dispatch => {
     // logic api goi tai day
     try {
-      const result = await axios({
-        url:`https://shop.cyberlearn.vn/api/Product/getbyid?id=${idProduct}`,
-        method:'GET'
-      })
+      // const result = await axios({
+      //   url:`https://shop.cyberlearn.vn/api/Product/getbyid?id=${idProduct}`,
+      //   method:'GET'
+      // })
+
+      let result = await http.get(`/Product/getbyid?id=${idProduct}`)
       // dua data gui len action loai 1 dua len reducer
       const actionLoai1 = setProductDetail(result.data.content)
 
