@@ -88,7 +88,6 @@ export const getProfileApi = () => {
           Authorization: `Bearer ${getStore(ACCESS_TOKEN)}`,
         },
       });
-      console.log("getProfileApi() :  ", result.data.content);
 
       // tao action creator  => dispatch len redux
       const action = setUserLoginAction(result.data.content);
@@ -98,6 +97,12 @@ export const getProfileApi = () => {
         "🚀 ~ file: userReducer.jsx:73 ~ getProfileApi ~ error:",
         error
       );
+      // khi chua dang nhap thi phai TB Dang nhap moi duco sd trang
+      alert('Chưa đăng nhập hệ thống !!');
+      // tra ve trang login
+      history.push('/login')
+      
+       
     }
   };
 };

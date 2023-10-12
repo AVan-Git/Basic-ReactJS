@@ -13,10 +13,12 @@ export default function Profile() {
     dispatch(action);
   }, [])
 
-
-  //
+  
+  // khi userLogin chưa dang nhap len chua co data(user) len vao trang nay khi load lan 1 se bi loi 
+  // fix them ? sau userLogin?
+  // 
   const renderOrderHistory = () => {
-    return userLogin.ordersHistory?.map((order,index) => {
+    return userLogin?.ordersHistory?.map((order,index) => {
       
       return (
         <div className="orderDetail" key={index}>
@@ -56,9 +58,9 @@ export default function Profile() {
       <div className="d-flex">
         <div className="col-4">
           <div className="profile mt-5">
-            <img src={userLogin.avatar} alt="..." className='w-100' style={{maxWidth:250}} />
-            <div>Email: {userLogin.email}</div>
-            <div>Name: {userLogin.name}</div>
+            <img src={userLogin?.avatar} alt="..." className='w-100' style={{maxWidth:250}} />
+            <div>Email: {userLogin?.email}</div>
+            <div>Name: {userLogin?.name}</div>
           </div>
         </div>
         <div className="col-8">
