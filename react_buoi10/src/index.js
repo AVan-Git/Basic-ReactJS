@@ -31,6 +31,9 @@ import Login from "./pages/Login/Login";
 import { createBrowserHistory } from "history";
 import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
 import DemoHOC from "./pages/DemoHOC/DemoHOC";
+import AdminTemplate from "./templates/AdminTemplate";
+import UserManagement from "./pages/Admin/UserManagement/UserManagement";
+import ProductManagement from "./pages/Admin/ProductManagement/ProductManagement";
 
 export const history = createBrowserHistory();
 
@@ -68,8 +71,12 @@ root.render(
             <Route path="demo-HOC" element={<DemoHOC />}></Route>
 
 
-            <Route path="*" element={<Navigate to={"/"} />}></Route>
-          </Route>
+            {/* <Route path="*" element={<Navigate to={"/"} />}></Route> */}
+          </Route> 
+
+          
+          <Route path="/admin/users" element={<AdminTemplate Compoment={UserManagement } />} ></Route>
+          <Route path="/admin/products" element={<AdminTemplate Compoment={ProductManagement } />} ></Route>
         </Routes>
       {/* </BrowserRouter> */}
     </HistoryRouter>
