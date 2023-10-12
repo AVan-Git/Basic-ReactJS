@@ -34,6 +34,7 @@ Học FE cơ bản
     npm i react-spring          -- animation
     npm install formik --save   -- lib giúp quản lý form
     npm install yup --save      -- lib - regex || validationSchema
+    npm i history               -- quanr ly router (add lib History  của router giup chuyển trang khi k đứng ở component)
 
 ###
     tao nhanh jsx: 

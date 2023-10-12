@@ -18,6 +18,7 @@
         - lib animation
         https://www.react-spring.dev/docs/components/use-spring
     - middleware redux toolkit
+    - npm i history  -- quanr ly router (add lib History  của router giup chuyển trang khi k đứng ở component)
     
 ## Anh minh hoa
 ![...](./images/img_code.png)
