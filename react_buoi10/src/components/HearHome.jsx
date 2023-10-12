@@ -2,6 +2,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
+import {
+  ACCESS_TOKEN,
+  USER_LOGIN,
+  clearCookie,
+  clearLocalStorage,
+} from "../unit/config";
 
 export default function HearHome() {
   const navigate = useNavigate();
@@ -18,6 +24,21 @@ export default function HearHome() {
           <NavLink className="nav-link" to="/hook-profile" aria-current="page">
             Hello {userLogin.email}
           </NavLink>
+          <span
+            className="nav-link"
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              clearCookie(ACCESS_TOKEN);
+              clearLocalStorage(ACCESS_TOKEN);
+              clearLocalStorage(USER_LOGIN);
+
+              // reload 
+              window.location.reload();
+              
+            }}
+          >
+            Logout
+          </span>
         </li>
       );
     }

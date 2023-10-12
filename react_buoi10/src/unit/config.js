@@ -61,6 +61,12 @@ export const configs = {
     }
     return null;
   },
+  clearCookie: (name) => {
+    setCookie('',-1, name)
+  },
+  clearLocalStorage: (name) => {
+    localStorage.removeItem(name);
+  },
   ACCESS_TOKEN: 'accessToken',
   USER_LOGIN:'userLogin'
 };
@@ -72,6 +78,8 @@ export const {
   getCookie,
   getStore,
   getStoreJSON,
+  clearCookie,
+  clearLocalStorage,
   ACCESS_TOKEN,
   USER_LOGIN,
 } = configs;
