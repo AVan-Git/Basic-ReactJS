@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 // import './asssets/scss/style.scss'
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import UseStateDemo from "./pages/UseStateDemo/UseStateDemo";
 import UseEffectDemo from "./pages/UseEffectDemo/UseEffectDemo";
 import UseCallBackDemo from "./pages/UseCallBackDemo/UseCallBackDemo";
@@ -30,6 +30,7 @@ import Login from "./pages/Login/Login";
 // add lib History  của router giup chuyển trang khi k đứng ở component
 import { createBrowserHistory } from "history";
 import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
+import DemoHOC from "./pages/DemoHOC/DemoHOC";
 
 export const history = createBrowserHistory();
 
@@ -64,6 +65,10 @@ root.render(
             <Route path="custom-hook" element={<DemoUseRoute />}></Route>
             <Route path="animation" element={<DemoAnimation />}></Route>
             <Route path="login" element={<Login />}></Route>
+            <Route path="demo-HOC" element={<DemoHOC />}></Route>
+
+
+            <Route path="*" element={<Navigate to={"/"} />}></Route>
           </Route>
         </Routes>
       {/* </BrowserRouter> */}

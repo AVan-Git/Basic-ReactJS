@@ -93,7 +93,6 @@ export const http = axios.create({
   baseURL:`https://shop.cyberlearn.vn/api`,
   timeout:6000// thoi gian duy tri 600s
 })
-console.log("🚀 ~ file: config.js:86 ~ http:", http)
 
 // cấu hình request 
 http.interceptors.request.use((configs) => {

@@ -9,6 +9,7 @@ Học FE cơ bản
     - học hook (UseState -- UseEffect -- ...)
     -  cai lib
     - tao component
+    - HOC: Higher order component  : sử dụng để tái sử dụng tren 1 giao dien
 
 ![...](./images/img_cautructhumuc.png)
 ## lệnh cơ bản
@@ -41,7 +42,9 @@ Học FE cơ bản
     rfc: react function component
     rcc: react class component
     rcredux: react class component redux
-    rxreducer: reducer 
+    rxreducer: reducer
+
+    HOC: Higher order component 
 
 ### hook - rfc: react function component
 

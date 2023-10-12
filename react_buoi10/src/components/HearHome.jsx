@@ -34,7 +34,7 @@ export default function HearHome() {
 
               // reload 
               window.location.reload();
-              
+
             }}
           >
             Logout
@@ -82,6 +82,12 @@ export default function HearHome() {
               </NavLink>
             </li>
             {renderNavLinkLogin()}
+
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/demo-HOC">
+                Demo HOC
+              </NavLink>
+            </li>
 
             <li className="nav-item">
               <NavLink className="nav-link" to="#">
