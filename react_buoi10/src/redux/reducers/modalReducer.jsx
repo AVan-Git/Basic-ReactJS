@@ -1,4 +1,5 @@
 //rxslice
+import React from "react";
 
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -13,6 +14,11 @@ const initialState = {
     return <div>default value</div>;
   },
   Component2: ComponentDefault,
+  submitForm: () => {
+    alert('submit form');
+  },
+  
+  
 };
 
 const modalReducer = createSlice({
@@ -27,8 +33,12 @@ const modalReducer = createSlice({
       state.Component = Component;
       state.title = title;
     },
+    setSubmitAction: (state, action) => {
+        state.submitForm = action.payload
+    },
+   
   },
 });
 // exp nay de sử dụng theo cách 2
-export const { setModalAction } = modalReducer.actions;
+export const { setModalAction, setSubmitAction } = modalReducer.actions;
 export default modalReducer.reducer;

@@ -5,7 +5,7 @@ export default function HOCModel(props) {
 
 
   // HOC theo reducer
-  const {title, Component, Component2} = useSelector(state => state.modalReducer);
+  const {title, Component, Component2, clearForm, submitForm} = useSelector(state => state.modalReducer);
 
   
   return (
@@ -56,12 +56,12 @@ export default function HOCModel(props) {
                 <button
                   type="button"
                   className="btn btn-secondary"
-                  data-bs-dismiss="modal"
+                  onClick={clearForm}
                 >
-                  Close
+                  Clear
                 </button>
-                <button type="button" className="btn btn-primary">
-                  Save
+                <button type="button" onClick={submitForm} className="btn btn-primary">
+                  Submit
                 </button>
               </div>
             </div>
