@@ -1,0 +1,13 @@
+/***
+    - trong cac folder component va page tổ chức như các react component folder
+    - Trong cac file component.scss va page.scss thi import _variable
+    - trong filder style se import  base, component, pages, template,...
+*/
+//
+@import "./base/base";
+//
+@import "./components/header";
+//
+@import "./pages/home";
+@import "./pages/login";
+@import "./pages/register";
