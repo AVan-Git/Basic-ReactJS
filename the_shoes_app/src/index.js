@@ -13,6 +13,8 @@ import Profile from "./pages/Profile/Profile";
 import Search from "./pages/Search/Search";
 import Detail from "./pages/Detail/Detail";
 import Cart from "./pages/Cart/Cart";
+import HomeMobile from "./pages/Home/HomeMobile";
+import ResponsiveItem from "./HOC/ResponsiveItem";
 
 
 // cấu hình các route - dom
@@ -24,7 +26,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="" element={<HomeTemplate />}>
-          <Route index element={<Home />}></Route>
+          <Route index element={<ResponsiveItem component={Home} componentMobile={HomeMobile} />}></Route>
           <Route path="register" element={<Register />}></Route>
           <Route path="login" element={<Login />}></Route>
           <Route path="profile" element={<Profile />}></Route>
