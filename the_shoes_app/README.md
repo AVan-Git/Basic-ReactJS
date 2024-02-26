@@ -1,4 +1,4 @@
-# BT Shop Shoes
+# BT Shop Shoes - gook luck
 
 Tgian thực hiên ()
 
@@ -51,6 +51,6 @@ Tgian thực hiên ()
 
 ## nguồn tham khảo - tài liệu
 *   [link youtube](https://www.youtube.com/watch?v=8FIFV-fg3-o&list=PLikSVTWMZtjNUFFsvZJpiaNpR1_hrggDf&index=16&ab_channel=L%C3%AATh%C3%A0nhPh%E1%BA%A1m)
-*
-*
-*
+*   [link figma](https://www.figma.com/file/HPyvaEJpBCxXB3p2r59nk6/Capstone-project-full-page?type=design&node-id=5704-693&mode=design&t=QT1HLvdabEVGzjI7-0)
+*   [link APi](https://shop.cyberlearn.vn/swagger/index.html)
+*   [link Search icon fa](https://glyphsearch.com/) theo thẻ i-class
