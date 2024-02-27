@@ -15,6 +15,7 @@ import Detail from "./pages/Detail/Detail";
 import Cart from "./pages/Cart/Cart";
 import HomeMobile from "./pages/Home/HomeMobile";
 import ResponsiveItem from "./HOC/ResponsiveItem";
+import HomeTemplateMobile from "./templates/HomeTemplate/HomeTemplateMobile";
 
 
 // cấu hình các route - dom
@@ -25,7 +26,7 @@ root.render(
   <Provider store={store}>
     <BrowserRouter>
       <Routes>
-        <Route path="" element={<HomeTemplate />}>
+        <Route path="" element={<ResponsiveItem component={HomeTemplate} componentMobile={HomeTemplateMobile} />}>
           <Route index element={<ResponsiveItem component={Home} componentMobile={HomeMobile} />}></Route>
           <Route path="register" element={<Register />}></Route>
           <Route path="login" element={<Login />}></Route>

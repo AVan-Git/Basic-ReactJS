@@ -20,8 +20,8 @@ function ResponsiveItem(props) {
 
     //khi chuyển qua 1 route khac thi phải xóa cái này
     return () => {
-      window.removeEventListener('resize')
-    }
+      window.removeEventListener("resize", () => {});
+    };
   }, []);
 
   if (screen.width < 768 && props.componentMobile) {
