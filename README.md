@@ -41,6 +41,8 @@ Học FE cơ bản
     npm install formik --save   -- lib giúp quản lý form
     npm install yup --save      -- lib - regex || validationSchema
     npm i history               -- quanr ly router (add lib History  của router giup chuyển trang khi k đứng ở component)
+    npm i typescript -g        -- install typescript   ( tsc -v || tsc.cmd -v : check vesion) 
+    tsc.cmd --init              -- sinh file tsconfig.json
 
 ###
     tao nhanh jsx: 
